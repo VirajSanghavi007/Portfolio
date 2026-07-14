@@ -1006,6 +1006,28 @@ section { padding: var(--section-gap) 0; }
     border: 1px solid rgba(251,191,36,0.2);
     color: #fbbf24;
 }
+.course-badge.planned {
+    background: rgba(148,163,184,0.08);
+    border: 1px solid rgba(148,163,184,0.2);
+    color: var(--text-secondary);
+}
+.courses-column-title {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+.courses-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+.courses-column .course-card { margin-bottom: 16px; }
+@media (max-width: 900px) {
+    .courses-columns { grid-template-columns: 1fr; }
+}
 
 /* =====================================================
    ACTIVITY SECTION (LeetCode / Codeforces / Medium)
