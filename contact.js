@@ -10,7 +10,7 @@
 //     Copy the Template ID (looks like "template_xxxxxxx") → paste into EMAILJS_TEMPLATE_ID
 //  4. Account (top right) → Public Key → copy → paste into EMAILJS_PUBLIC_KEY
 //
-//  Then save and open index.html — the form will deliver to your Gmail.
+//  Then save and open index.html - the form will deliver to your Gmail.
 // =====================================================
 
 const EMAILJS_PUBLIC_KEY  = '0z-U4F7B8BJEgmCHn';     // from Account → Public Key
@@ -56,7 +56,7 @@ function handleFormSubmit(e) {
     })
     .catch((err) => {
         console.error('EmailJS error:', err);
-        btn.textContent      = 'Failed — try again';
+        btn.textContent      = 'Failed - try again';
         btn.style.background = '#b91c1c';
         setTimeout(() => {
             btn.textContent      = 'Send Message';

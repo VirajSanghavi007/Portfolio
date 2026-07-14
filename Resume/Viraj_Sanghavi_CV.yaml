@@ -1,0 +1,121 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
+cv:
+  name: Viraj Sanghavi
+  headline:
+  location: Mumbai, India
+  email: virajsanghavi000@gmail.com
+  photo:
+  phone: "+91-8104488190"
+  website:
+  social_networks:
+    - network: LinkedIn
+      username: virajsanghavi
+    - network: GitHub
+      username: VirajSanghavi007
+  custom_connections:
+    - fontawesome_icon: kaggle
+      placeholder: kaggle.com/virajsanghavi
+      url: https://kaggle.com/virajsanghavi
+  sections:
+    education:
+      - institution: Dwarkadas J. Sanghvi College of Engineering
+        area: Computer Engineering
+        degree: B.Tech
+        date:
+        start_date: 2024-09
+        end_date: 2028-06
+        location: Mumbai, India
+        summary: 'CGPA: 9.15'
+        highlights:
+    experience:
+      - company: Enterprise Software Company
+        position: Developer Intern
+        date:
+        start_date: 2026-06
+        end_date: 2026-08
+        location: Mumbai, India
+        summary:
+        highlights:
+          - Built an AI cash-flow forecasting system using Amazon Chronos-2, replacing a legacy XGBoost pipeline, predicting daily net cash flow across thousands of grouped financial records
+          - Designed a Flask API serving 365-day forecasts per (project, ledger, company) group, integrated into the existing Java EE ERP via PostgreSQL
+          - Implemented walk-forward backtesting (5 rolling origins, 4-month horizon) with bias correction for right-skewed construction cash flow data
+    projects:
+      - name: '[Vigilia](https://github.com/VirajSanghavi007/Vigilia) - Graph-Native AML Detection'
+        date:
+        start_date: 2025-01
+        end_date: present
+        location:
+        summary: Real-time Anti-Money Laundering detection on a transaction multigraph
+        highlights:
+          - 'Started as Argus at iDEA 2.0 (Union Bank of India PS3, Team Zeta, Top 40+ finalist); continued past the hackathon under the name Vigilia'
+          - Built graph-native AML system detecting 8 structural typologies plus 7 behavioural signals (structuring, smurfing, layering) on 500K+ IBM synthetic transactions, rebuilt since on a Multi-GNN (PNAConv + GINEConv) classifying transactions directly on the multigraph
+          - Added FastAPI + PostgreSQL persistence with a documented schema-migration process, an audit trail, and a pytest suite covering pure decision logic
+      - name: '[Hermes](https://github.com/VirajSanghavi007/Hermes) - Adaptive ASR Pipeline'
+        date:
+        start_date: 2025-01
+        end_date: present
+        location:
+        summary: Closed-loop speech recognition with phoneme-level error diagnosis
+        highlights:
+          - Built a research-grade adaptive ASR pipeline - Wav2Vec2 transcription, 8-feature acoustic noise fingerprinting across 5 environment categories, and TTS-driven closed-loop remediation
+          - Implemented a phoneme-level drift monitor (20-utterance rolling window) plus 5+ published techniques including AdaLoRA (Zhang et al., ICLR 2023) and HDMoLE LoRA-MoE routing (Mu et al., ICASSP 2025)
+          - Deployed full-stack system (FastAPI, React, PostgreSQL, Docker) with CI/CD via GitHub Actions on Render
+      - name: '[Fortuna](https://github.com/VirajSanghavi007/Fortuna) - Algorithmic Trading System'
+        date:
+        start_date: '2025'
+        end_date:
+        location:
+        summary: Multi-asset trading system spanning equities and crypto
+        highlights:
+          - Built a stacked RF/XGBoost/LightGBM ensemble with regime routing across 20+ equities and crypto pairs, backtested via walk-forward optimization (Sharpe up to 3.46), with SHAP/LIME explainability, drift monitoring, and a 144-test suite
+    research:
+      - company: DJS Anveshan - Research Club
+        position: Publicity & Research Member
+        date:
+        start_date: 2024-01
+        end_date: present
+        location: Dwarkadas J. Sanghvi College of Engineering
+        summary:
+        highlights:
+          - Authored a problem discovery report on a critical Federated Learning failure mode - robust aggregation filters (Krum, FLAME) silently discarding valid non-IID updates from minority institutions in cross-institutional fraud detection
+          - Identified an unaddressed gap in FL security literature as of 2025, citing IEEE Transactions on Big Data and JPMorgan's Project Aikya
+    skills:
+      - label: Languages / Infra
+        details: Python, SQL, TypeScript, Bash, C++, Git, Docker, FastAPI, React, PostgreSQL, n8n
+      - label: ML / Data
+        details: PyTorch, PyTorch Geometric, scikit-learn, XGBoost, LightGBM, NumPy, Pandas, Hugging Face, MLflow
+design:
+  theme: engineeringresumes
+  page:
+    top_margin: 1cm
+    bottom_margin: 1cm
+    left_margin: 1.5cm
+    right_margin: 1.5cm
+  typography:
+    line_spacing: 0.55em
+  sections:
+    space_between_regular_entries: 0.6em
+    space_between_text_based_entries: 0.15em
+  header:
+    space_below_name: 0.4cm
+    space_below_connections: 0.4cm
+locale:
+  language: english
+settings:
+  current_date: today
+  render_command:
+    output_folder: rendercv_output
+    design:
+    locale:
+    typst_path: OUTPUT_FOLDER/NAME_IN_SNAKE_CASE_CV.typ
+    pdf_path: OUTPUT_FOLDER/NAME_IN_SNAKE_CASE_CV.pdf
+    markdown_path: OUTPUT_FOLDER/NAME_IN_SNAKE_CASE_CV.md
+    html_path: OUTPUT_FOLDER/NAME_IN_SNAKE_CASE_CV.html
+    png_path: OUTPUT_FOLDER/NAME_IN_SNAKE_CASE_CV.png
+    dont_generate_markdown: false
+    dont_generate_html: false
+    dont_generate_typst: false
+    dont_generate_pdf: false
+    dont_generate_png: false
+  bold_keywords: []
+  pdf_title: Viraj Sanghavi - CV

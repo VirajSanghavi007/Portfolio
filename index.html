@@ -33,6 +33,7 @@
             <li><a href="#experience">experience</a></li>
             <li><a href="#courses">courses</a></li>
             <li><a href="#writing">writing</a></li>
+            <li><a href="#freelance">freelance</a></li>
             <li><a href="#contact" class="nav-cta">contact</a></li>
         </ul>
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
@@ -99,6 +100,16 @@
                     I care about ML that is <strong>rigorous, explainable, and production-ready</strong>.
                     No shortcuts on data leakage, no skipping evaluation, no hand-wavy results.
                 </p>
+                <p>
+                    I don't trust a result I haven't tried to break first. Most of what I build gets
+                    re-evaluated harder than it needs to be for a demo: walk-forward backtests instead
+                    of a single split, phoneme-level error diagnosis instead of trusting a CER number,
+                    explicit drift monitoring instead of assuming a model stays good. I'd rather ship
+                    something slower that's actually validated than something fast that just looks
+                    finished. That extends to how I learn, too. When I use AI to move quickly on
+                    something, I go back and rebuild the parts I didn't actually understand, closed-book,
+                    before I count it as a real skill.
+                </p>
             </div>
             <div class="about-right fade-in">
                 <div class="interest-card">
@@ -119,7 +130,7 @@
                     <div class="interest-icon">⚙️</div>
                     <div class="interest-content">
                         <h4>Workflow Automation</h4>
-                        <p>Building production-pattern pipelines with n8n — data validation, sub-workflow orchestration, and analytics.</p>
+                        <p>Building production-pattern pipelines with n8n - data validation, sub-workflow orchestration, and analytics.</p>
                     </div>
                 </div>
                 <div class="interest-card">
@@ -161,7 +172,7 @@
                         <span class="project-tag">Speech AI · ASR</span>
                         <span class="course-badge wip" style="font-size:10px;padding:2px 10px;margin-bottom:6px;display:inline-block;">Ongoing</span>
                         <h3 class="project-title">Hermes</h3>
-                        <p class="project-name-story">Messenger god — carries meaning across gods and mortals, translates one register into another. A speech system's entire job is that same translation: raw acoustic signal into meaning, and diagnosing exactly where the translation breaks.</p>
+                        <p class="project-name-story">Messenger god - carries meaning across gods and mortals, translates one register into another. A speech system's entire job is that same translation: raw acoustic signal into meaning, and diagnosing exactly where the translation breaks.</p>
                         <p class="project-desc">
                             A research-grade adaptive speech pipeline that goes beyond transcription. It diagnoses
                             WHY ASR fails at the phoneme level, fingerprints acoustic noise, detects model drift,
@@ -250,12 +261,12 @@
                     <div>
                         <span class="project-tag">Finance · Quant Trading</span>
                         <h3 class="project-title">Fortuna</h3>
-                        <p class="project-name-story">Goddess of luck, fate, and fortune — capricious, never fully controllable, only measured and hedged against. A trading system doesn't eliminate that uncertainty, it manages exposure to it — the name is the premise, not decoration.</p>
+                        <p class="project-name-story">Goddess of luck, fate, and fortune - capricious, never fully controllable, only measured and hedged against. A trading system doesn't eliminate that uncertainty, it manages exposure to it - the name is the premise, not decoration.</p>
                         <p class="project-desc">
                             Multi-asset algorithmic trading system covering equities and crypto in one pipeline:
                             feature engineering, a stacked RF/XGBoost/LightGBM ensemble with regime routing,
                             walk-forward backtesting, SHAP/LIME explainability with drift monitoring, and
-                            paper execution via Alpaca — surfaced through a FastAPI backend and a 7-page
+                            paper execution via Alpaca - surfaced through a FastAPI backend and a 7-page
                             Streamlit dashboard.
                         </p>
                         <div class="project-stack">
@@ -297,14 +308,14 @@
                             via FRED, feeding a shared feature engineering layer. Three base models
                             (RandomForest, XGBoost, LightGBM) train per-asset and feed a stacking ensemble;
                             a regime router switches strategy based on detected market regime. Deep/RL models
-                            (PPO, SAC) are supported but optional — the pipeline falls back to the classical
+                            (PPO, SAC) are supported but optional - the pipeline falls back to the classical
                             ensemble gracefully when <code>torch</code> isn't installed.
                         </p>
                         <ul>
-                            <li>Walk-forward optimization (WFO) backtesting — rolling re-validation instead of one static split, across 20+ equities and crypto pairs.</li>
+                            <li>Walk-forward optimization (WFO) backtesting - rolling re-validation instead of one static split, across 20+ equities and crypto pairs.</li>
                             <li>SHAP/LIME attribution plus KS-test drift monitoring comparing live feature distributions against training data, with an append-only JSONL audit log of every decision.</li>
                             <li>Paper execution via a broker simulator with realistic next-open fills and delta-to-target rebalancing, plus live paper trading through Alpaca.</li>
-                            <li>FastAPI backend (REST + a <code>/ws/signals</code> websocket) and a 7-page Streamlit dashboard, both wired to real pipeline data — no mocked views.</li>
+                            <li>FastAPI backend (REST + a <code>/ws/signals</code> websocket) and a 7-page Streamlit dashboard, both wired to real pipeline data - no mocked views.</li>
                         </ul>
 
                         <h4>Results</h4>
@@ -316,7 +327,7 @@
 
                         <h4>Key Learnings</h4>
                         <p>
-                            Walk-forward backtesting catches overfitting a single split hides completely —
+                            Walk-forward backtesting catches overfitting a single split hides completely  - 
                             several early model configs looked strong on one window and fell apart on the
                             next. Explainability and drift monitoring aren't optional extras for a trading
                             system; without them a silently degrading model just keeps trading until the
@@ -338,9 +349,9 @@
                     <div>
                         <span class="project-tag">Finance · Fraud Detection</span>
                         <h3 class="project-title">Vigilia</h3>
-                        <p class="project-name-story">Latin for a night watch — Roman legions rotated troops through the <em>vigiliae</em>, fixed shifts through the night when most attacks came. Started life as Argus during the hackathon (hundred-eyed watcher of Greek myth); renamed once it stopped being a 48-hour build and became something meant to actually keep watch.</p>
+                        <p class="project-name-story">Latin for a night watch - Roman legions rotated troops through the <em>vigiliae</em>, fixed shifts through the night when most attacks came. Started life as Argus during the hackathon (hundred-eyed watcher of Greek myth); renamed once it stopped being a 48-hour build and became something meant to actually keep watch.</p>
                         <p class="project-desc">
-                            Graph-native Anti-Money Laundering detection system. Started as Argus, built for Union Bank of India in 48 hours at iDEA 2.0 — renamed to Vigilia once development continued past the hackathon into a real backend: FastAPI + Postgres persistence, schema migrations, a Multi-GNN classifying transactions directly on the graph, and a pytest suite. Ingests 500K+ synthetic transactions, constructs a directed account graph, and classifies 8 AML typologies.
+                            Graph-native Anti-Money Laundering detection system. Started as Argus, built for Union Bank of India in 48 hours at iDEA 2.0 - renamed to Vigilia once development continued past the hackathon into a real backend: FastAPI + Postgres persistence, schema migrations, a Multi-GNN classifying transactions directly on the graph, and a pytest suite. Ingests 500K+ synthetic transactions, constructs a directed account graph, and classifies 8 AML typologies.
                         </p>
                         <div class="project-stack">
                             <span class="tech-tag">Python</span>
@@ -368,7 +379,7 @@
                         <h4>Problem</h4>
                         <p>Union Bank's fraud investigators manually reconstruct transaction trails, taking 3 to 5 days per case. Coordinated laundering schemes (circular routing, layering, smurfing) escape detection before funds exit.</p>
                         <h4>Since the Hackathon</h4>
-                        <p>The 48-hour build, then called Argus, was a Random Forest on graph features — enough to place Top 40+ at iDEA 2.0, not enough to trust in production. Since then, renamed to Vigilia: Postgres persistence with a documented schema-migration process, a Multi-GNN (PNAConv + GINEConv) classifying transactions directly on the multigraph instead of flattening to tabular features, an audit trail and account whitelist system, and a pytest suite covering the pure decision logic. The hackathon proved the idea; everything since has been proving it holds up.</p>
+                        <p>The 48-hour build, then called Argus, was a Random Forest on graph features - enough to place Top 40+ at iDEA 2.0, not enough to trust in production. Since then, renamed to Vigilia: Postgres persistence with a documented schema-migration process, a Multi-GNN (PNAConv + GINEConv) classifying transactions directly on the multigraph instead of flattening to tabular features, an audit trail and account whitelist system, and a pytest suite covering the pure decision logic. The hackathon proved the idea; everything since has been proving it holds up.</p>
                         <h4>Detection Pipeline</h4>
                         <ul>
                             <li>8 AML typologies: Cycle, Fan-Out, Fan-In, Scatter-Gather, Gather-Scatter, Bipartite, Stack, Random Chain</li>
@@ -397,7 +408,7 @@
                     <div>
                         <span class="project-tag">Logistics · Trade</span>
                         <h3 class="project-title">Annona</h3>
-                        <p class="project-name-story">Personification of Rome's grain supply — the deified logistics of moving food from provinces to the capital, the closest actual Roman precedent for a platform that moves goods between producers and buyers across borders.</p>
+                        <p class="project-name-story">Personification of Rome's grain supply - the deified logistics of moving food from provinces to the capital, the closest actual Roman precedent for a platform that moves goods between producers and buyers across borders.</p>
                         <p class="project-desc">
                             ML model that matches exporters with relevant importers from structured trade datasets, using PCA dimensionality reduction and Bayesian probabilistic confidence scoring.
                         </p>
@@ -458,9 +469,9 @@
                         <span class="project-tag">Finance · Fraud Detection</span>
                         <span style="font-family:var(--font-mono);font-size:10px;color:var(--cyan);background:var(--cyan-dim);border:1px solid rgba(28,143,160,0.2);padding:2px 10px;border-radius:20px;margin-left:8px;">iDEA 2.0 · Top 40+ Finalist</span>
                         <h3 class="project-title">Argus</h3>
-                        <p class="project-name-story">Argus Panoptes — the hundred-eyed giant of Greek myth, set to watch ceaselessly; even asleep, some eyes stayed open. Fitting for a 48-hour build whose whole job was watching a transaction graph for what shouldn't be there.</p>
+                        <p class="project-name-story">Argus Panoptes - the hundred-eyed giant of Greek myth, set to watch ceaselessly; even asleep, some eyes stayed open. Fitting for a 48-hour build whose whole job was watching a transaction graph for what shouldn't be there.</p>
                         <p class="project-desc">
-                            Graph-native Anti-Money Laundering detection system built for Union Bank of India in 48 hours. Ingests 500K synthetic transactions, constructs a directed account graph, and classifies 8 AML typologies using structural graph analysis and a Random Forest classifier. Later developed further and renamed <strong>Vigilia</strong> — see Projects.
+                            Graph-native Anti-Money Laundering detection system built for Union Bank of India in 48 hours. Ingests 500K synthetic transactions, constructs a directed account graph, and classifies 8 AML typologies using structural graph analysis and a Random Forest classifier. Later developed further and renamed <strong>Vigilia</strong> - see Projects.
                         </p>
                         <div class="project-stack">
                             <span class="tech-tag">Python</span>
@@ -497,7 +508,7 @@
                             <div class="metric-box"><div class="val">0.86</div><div class="key">Accuracy</div></div>
                         </div>
                         <h4>What Happened After</h4>
-                        <p>The Random Forest baseline above is exactly what shipped in 48 hours — kept here unedited as the hackathon record. Everything built since (Multi-GNN, Postgres persistence, migrations, audit trail, tests) lives under the new name, Vigilia, in the Projects section above.</p>
+                        <p>The Random Forest baseline above is exactly what shipped in 48 hours - kept here unedited as the hackathon record. Everything built since (Multi-GNN, Postgres persistence, migrations, audit trail, tests) lives under the new name, Vigilia, in the Projects section above.</p>
                     </div>
                 </div>
             </div>
@@ -552,7 +563,7 @@
                     <p>
                         A fraud detection model that works for 90% of banks but fails for the remaining 10%
                         creates an exploit window. Fraudsters who identify these blind spots can operate
-                        undetected. What makes this dangerous is the reported accuracy — the central server
+                        undetected. What makes this dangerous is the reported accuracy - the central server
                         has no mechanism to flag that its metrics conceal local failure.
                     </p>
 
@@ -561,14 +572,14 @@
                         Three banks train a joint fraud model via FL. Banks A and B are international with
                         similar profiles, but Bank C is regional with different customers. The aggregation
                         filter sees Bank C's updates as outliers, discards them, and the converged model
-                        shows high accuracy — but fails to catch fraud patterns specific to Bank C's population.
+                        shows high accuracy - but fails to catch fraud patterns specific to Bank C's population.
                     </p>
 
                     <h4>Research Context</h4>
                     <ul>
                         <li>Studying FLAME and Krum aggregation schemes and their behaviour under non-IID conditions</li>
                         <li>Li et al. (IEEE 2024): Byzantine-robust schemes fail even without Byzantine clients when data is non-IID</li>
-                        <li>FL adoption accelerating due to GDPR, India's DPDP Act — more deployments mean more severe non-IID conditions</li>
+                        <li>FL adoption accelerating due to GDPR, India's DPDP Act - more deployments mean more severe non-IID conditions</li>
                         <li>No standardized pre-deployment verification protocol exists for FL systems to catch this failure class</li>
                     </ul>
                 </div>
@@ -666,7 +677,7 @@
                         <div class="n8n-project-icon">🕷️</div>
                         <div>
                             <h4 class="n8n-project-title">E-Commerce Product Scraper → n8n</h4>
-                            <p class="n8n-project-desc">A general-purpose scraper that searches <strong>Amazon India</strong> and <strong>Flipkart</strong> for any term and extracts each product's name, price, URL, and description. All results are batched into a single HTTP POST to an <strong>n8n</strong> webhook, which splits them out, appends a row per product to a Google Sheet, and generates a standalone styled HTML page per product saved to Google Drive. The Python scraper and n8n workflow are fully decoupled — both site scrapers emit the same JSON shape, so everything downstream is identical regardless of source.</p>
+                            <p class="n8n-project-desc">A general-purpose scraper that searches <strong>Amazon India</strong> and <strong>Flipkart</strong> for any term and extracts each product's name, price, URL, and description. All results are batched into a single HTTP POST to an <strong>n8n</strong> webhook, which splits them out, appends a row per product to a Google Sheet, and generates a standalone styled HTML page per product saved to Google Drive. The Python scraper and n8n workflow are fully decoupled - both site scrapers emit the same JSON shape, so everything downstream is identical regardless of source.</p>
                             <div class="project-stack" style="margin-top:8px;">
                                 <span class="tech-tag">Python</span>
                                 <span class="tech-tag">Requests</span>
@@ -692,7 +703,7 @@
                     <div class="n8n-project-icon">⚙️</div>
                     <div>
                         <h4 class="n8n-project-title">Employee Onboarding Pipeline</h4>
-                        <p class="n8n-project-desc">Automated HR pipeline — webhook auth, field validation, duplicate detection, department routing via sub-workflows, audit logging, and error alerting.</p>
+                        <p class="n8n-project-desc">Automated HR pipeline - webhook auth, field validation, duplicate detection, department routing via sub-workflows, audit logging, and error alerting.</p>
                         <div class="project-stack" style="margin-top:8px;">
                             <span class="tech-tag">n8n</span>
                             <span class="tech-tag">Google Sheets</span>
@@ -705,7 +716,7 @@
                     <div class="n8n-project-icon">📊</div>
                     <div>
                         <h4 class="n8n-project-title">Automated Sales Report Pipeline</h4>
-                        <p class="n8n-project-desc">Weekly scheduled pipeline — merges multi-source sales data, calculates KPIs, detects performance anomalies (>20% drop), delivers HTML executive summary via email.</p>
+                        <p class="n8n-project-desc">Weekly scheduled pipeline - merges multi-source sales data, calculates KPIs, detects performance anomalies (>20% drop), delivers HTML executive summary via email.</p>
                         <div class="project-stack" style="margin-top:8px;">
                             <span class="tech-tag">n8n</span>
                             <span class="tech-tag">Google Sheets</span>
@@ -733,11 +744,11 @@
                     <div class="timeline-role">Developer Intern</div>
                     <div class="timeline-period">Jun 2026 – Aug 2026</div>
                 </div>
-                <div class="timeline-org">ITAakash Strategic Software Pvt. Ltd., Development</div>
+                <div class="timeline-org">Enterprise Software Company, Development</div>
                 <ul class="timeline-points">
-                    <li>Built an AI cash-flow forecasting system using Amazon Chronos-2, replacing a legacy XGBoost pipeline, achieving ~82-85% volume accuracy on company-level monthly predictions</li>
-                    <li>Designed a Flask API serving 365-day forecasts per (project, ledger, company) group, integrated into the existing Java EE ERP via PostgreSQL</li>
-                    <li>Implemented walk-forward backtesting (5 rolling origins, 4-month horizon) with bias correction for right-skewed construction cash flow data</li>
+                    <li>Built an AI cash-flow forecasting system using Amazon Chronos-2, replacing a legacy XGBoost pipeline, integrated into an existing ERP system</li>
+                    <li>Designed a Flask API serving rolling forecasts per grouped financial record, backed by PostgreSQL</li>
+                    <li>Implemented walk-forward backtesting with bias correction for right-skewed cash flow data</li>
                 </ul>
                 <button class="writeup-toggle" onclick="toggleInternshipProjects()" style="margin-top:8px;">
                     Show Projects <span class="internship-arrow">▾</span>
@@ -748,7 +759,7 @@
                             <div class="n8n-project-icon">💰</div>
                             <div>
                                 <h4 class="n8n-project-title">AI Cash-Flow Forecasting</h4>
-                                <p class="n8n-project-desc">Production system predicting daily net cash flow across 1,645 ledger groups and 6,052 projects. Chronos-2 zero-shot transformer behind a Flask API, feeding PostgreSQL for a Java EE ERP balance sheet view.</p>
+                                <p class="n8n-project-desc">Production system predicting daily net cash flow across thousands of grouped financial records. Chronos-2 zero-shot transformer behind a Flask API, feeding PostgreSQL for an ERP balance sheet view.</p>
                                 <div class="project-stack" style="margin-top:8px;">
                                     <span class="tech-tag">Python</span>
                                     <span class="tech-tag">Chronos-2</span>
@@ -916,6 +927,42 @@
         </div>
         <div style="text-align:center;margin-top:8px;">
             <a href="https://medium.com/@virajsanghavi" target="_blank" style="font-family:var(--font-mono);font-size:12px;color:var(--accent);text-decoration:none;transition:var(--transition);">Follow on Medium ↗</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== FREELANCE ===================== -->
+<section id="freelance">
+    <div class="container">
+        <div class="fade-in">
+            <h2 class="section-title">Freelance</h2>
+            <p class="section-subtitle">Open to short-term contract work in ML systems and automation.</p>
+        </div>
+
+        <div class="research-card fade-in">
+            <div class="research-card-header">
+                <div class="research-card-badge">Available</div>
+            </div>
+            <h3 class="research-card-title">ML pipelines, API backends, and workflow automation</h3>
+            <p class="research-card-desc">
+                Scoped engagements: an evaluation pipeline that actually validates a model before it ships,
+                a FastAPI backend for an existing ML system, or an n8n automation replacing a manual process.
+                Not open to ongoing/full-time contract work while in school, best suited for fixed-scope projects.
+            </p>
+            <div class="project-stack" style="margin:20px 0;">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">n8n</span>
+                <span class="tech-tag">PyTorch</span>
+                <span class="tech-tag">PostgreSQL</span>
+            </div>
+            <!-- Add real profile links once set up: Contra, Internshala, Upwork -->
+            <div class="project-links">
+                <a href="mailto:virajsanghavi000@gmail.com" class="project-link" title="Email">
+                    <div class="contact-link-icon">✉</div>
+                </a>
+            </div>
         </div>
     </div>
 </section>
