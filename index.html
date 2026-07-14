@@ -27,6 +27,7 @@
         <ul class="nav-links">
             <li><a href="#about">about</a></li>
             <li><a href="#projects">projects</a></li>
+            <li><a href="#hackathons">hackathons</a></li>
             <li><a href="#research">research</a></li>
             <li><a href="#skills">skills</a></li>
             <li><a href="#experience">experience</a></li>
@@ -325,7 +326,7 @@
                 </div>
             </div>
 
-            <!-- PROJECT 4: Argus -->
+            <!-- PROJECT 4: Vigilia -->
             <div class="project-card fade-in">
                 <div class="project-visual" style="background:linear-gradient(135deg,#1a0a0a,rgba(196,34,94,0.15))">
                     <video class="project-demo" autoplay loop muted playsinline>
@@ -336,11 +337,10 @@
                 <div class="project-header">
                     <div>
                         <span class="project-tag">Finance · Fraud Detection</span>
-                        <span style="font-family:var(--font-mono);font-size:10px;color:var(--cyan);background:var(--cyan-dim);border:1px solid rgba(28,143,160,0.2);padding:2px 10px;border-radius:20px;margin-left:8px;">iDEA 2.0 · Top 40+ Finalist</span>
-                        <h3 class="project-title">Argus</h3>
-                        <p class="project-name-story">Argus Panoptes — the hundred-eyed giant of Greek myth, set to watch ceaselessly; even asleep, some eyes stayed open. The name for a system whose only job is watching a transaction graph continuously for what shouldn't be there.</p>
+                        <h3 class="project-title">Vigilia</h3>
+                        <p class="project-name-story">Latin for a night watch — Roman legions rotated troops through the <em>vigiliae</em>, fixed shifts through the night when most attacks came. Started life as Argus during the hackathon (hundred-eyed watcher of Greek myth); renamed once it stopped being a 48-hour build and became something meant to actually keep watch.</p>
                         <p class="project-desc">
-                            Graph-native Anti-Money Laundering detection system. Built for Union Bank of India in 48 hours at iDEA 2.0, then continued past the hackathon into a real backend — FastAPI + Postgres persistence, schema migrations, a Multi-GNN classifying transactions directly on the graph, and a pytest suite. Ingests 500K+ synthetic transactions, constructs a directed account graph, and classifies 8 AML typologies.
+                            Graph-native Anti-Money Laundering detection system. Started as Argus, built for Union Bank of India in 48 hours at iDEA 2.0 — renamed to Vigilia once development continued past the hackathon into a real backend: FastAPI + Postgres persistence, schema migrations, a Multi-GNN classifying transactions directly on the graph, and a pytest suite. Ingests 500K+ synthetic transactions, constructs a directed account graph, and classifies 8 AML typologies.
                         </p>
                         <div class="project-stack">
                             <span class="tech-tag">Python</span>
@@ -368,7 +368,7 @@
                         <h4>Problem</h4>
                         <p>Union Bank's fraud investigators manually reconstruct transaction trails, taking 3 to 5 days per case. Coordinated laundering schemes (circular routing, layering, smurfing) escape detection before funds exit.</p>
                         <h4>Since the Hackathon</h4>
-                        <p>The 48-hour build was a Random Forest on graph features — enough to place Top 40+ at iDEA 2.0, not enough to trust in production. Since then: Postgres persistence with a documented schema-migration process, a Multi-GNN (PNAConv + GINEConv) classifying transactions directly on the multigraph instead of flattening to tabular features, an audit trail and account whitelist system, and a pytest suite covering the pure decision logic. The hackathon proved the idea; everything since has been proving it holds up.</p>
+                        <p>The 48-hour build, then called Argus, was a Random Forest on graph features — enough to place Top 40+ at iDEA 2.0, not enough to trust in production. Since then, renamed to Vigilia: Postgres persistence with a documented schema-migration process, a Multi-GNN (PNAConv + GINEConv) classifying transactions directly on the multigraph instead of flattening to tabular features, an audit trail and account whitelist system, and a pytest suite covering the pure decision logic. The hackathon proved the idea; everything since has been proving it holds up.</p>
                         <h4>Detection Pipeline</h4>
                         <ul>
                             <li>8 AML typologies: Cycle, Fan-Out, Fan-In, Scatter-Gather, Gather-Scatter, Bipartite, Stack, Random Chain</li>
@@ -420,13 +420,84 @@
                 <div class="project-writeup">
                     <div class="writeup-content">
                         <h4>Problem</h4>
-                        <p>Exporters struggle to find relevant international buyers in vast trade datasets. The hackathon challenge was to build a matching model from real structured trade data under time pressure.</p>
+                        <p>Exporters struggle to find relevant international buyers in vast trade datasets. Annona matches them from real structured trade data.</p>
                         <h4>Approach</h4>
                         <ul>
                             <li>PCA for dimensionality reduction on high-dimensional trade feature space</li>
                             <li>Bayesian probabilistic scoring to rank importer match confidence</li>
                             <li>Similarity-based ranking optimized for real-world trade data characteristics</li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== HACKATHONS ===================== -->
+<section id="hackathons" style="background:var(--bg-surface)">
+    <div class="container">
+        <div class="fade-in">
+            <h2 class="section-title">Hackathons</h2>
+            <p class="section-subtitle">Where a couple of these projects actually started.</p>
+        </div>
+        <div class="projects-grid">
+
+            <!-- Argus @ iDEA 2.0 -->
+            <div class="project-card fade-in">
+                <div class="project-visual" style="background:linear-gradient(135deg,#1a0a0a,rgba(196,34,94,0.15))">
+                    <video class="project-demo" autoplay loop muted playsinline>
+                        <source src="Videos/aml-demo.mp4" type="video/mp4">
+                    </video>
+                    <span class="project-visual-icon">🔍</span>
+                </div>
+                <div class="project-header">
+                    <div>
+                        <span class="project-tag">Finance · Fraud Detection</span>
+                        <span style="font-family:var(--font-mono);font-size:10px;color:var(--cyan);background:var(--cyan-dim);border:1px solid rgba(28,143,160,0.2);padding:2px 10px;border-radius:20px;margin-left:8px;">iDEA 2.0 · Top 40+ Finalist</span>
+                        <h3 class="project-title">Argus</h3>
+                        <p class="project-name-story">Argus Panoptes — the hundred-eyed giant of Greek myth, set to watch ceaselessly; even asleep, some eyes stayed open. Fitting for a 48-hour build whose whole job was watching a transaction graph for what shouldn't be there.</p>
+                        <p class="project-desc">
+                            Graph-native Anti-Money Laundering detection system built for Union Bank of India in 48 hours. Ingests 500K synthetic transactions, constructs a directed account graph, and classifies 8 AML typologies using structural graph analysis and a Random Forest classifier. Later developed further and renamed <strong>Vigilia</strong> — see Projects.
+                        </p>
+                        <div class="project-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">NetworkX</span>
+                            <span class="tech-tag">scikit-learn</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Cytoscape.js</span>
+                            <span class="tech-tag">Chart.js</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <div class="project-links">
+                            <a href="#projects" class="project-link" title="See Vigilia in Projects">
+                                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                        <button class="writeup-toggle" onclick="toggleWriteup(this)">read writeup <span class="writeup-arrow">▾</span></button>
+                    </div>
+                </div>
+                <div class="project-writeup">
+                    <div class="writeup-content">
+                        <h4>Problem</h4>
+                        <p>Union Bank's fraud investigators manually reconstruct transaction trails, taking 3 to 5 days per case. Coordinated laundering schemes (circular routing, layering, smurfing) escape detection before funds exit.</p>
+                        <h4>Detection Pipeline (as built at the hackathon)</h4>
+                        <ul>
+                            <li>8 AML typologies: Cycle, Fan-Out, Fan-In, Scatter-Gather, Gather-Scatter, Bipartite, Stack, Random Chain</li>
+                            <li>7 behavioural signals: rapid fan-out, round-trip, structuring below $10K, layering velocity, dormant activation, currency mismatch, smurfing</li>
+                            <li>Random Forest (200 trees, 16 graph features): F1 0.67, Precision 0.83, Accuracy 0.86</li>
+                        </ul>
+                        <h4>Results</h4>
+                        <div class="writeup-metrics">
+                            <div class="metric-box"><div class="val">0.67</div><div class="key">F1 Score</div></div>
+                            <div class="metric-box"><div class="val">0.83</div><div class="key">Precision</div></div>
+                            <div class="metric-box"><div class="val">0.86</div><div class="key">Accuracy</div></div>
+                        </div>
+                        <h4>What Happened After</h4>
+                        <p>The Random Forest baseline above is exactly what shipped in 48 hours — kept here unedited as the hackathon record. Everything built since (Multi-GNN, Postgres persistence, migrations, audit trail, tests) lives under the new name, Vigilia, in the Projects section above.</p>
                     </div>
                 </div>
             </div>
