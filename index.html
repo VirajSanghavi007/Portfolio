@@ -57,11 +57,11 @@
             <h1 class="hero-name">Viraj Sanghavi</h1>
             <p class="hero-tagline"><span id="typed-text"></span><span class="cursor"></span></p>
             <p class="hero-bio">
-                I'm a third-year CE student at DJ Sanghavi who doesn't wait to graduate to do
-                real work. I build adaptive speech pipelines, deploy fraud detectors, and
-                research failure modes in Federated Learning at DJS Anveshan. I compete
-                in hackathons, automate workflows with n8n, and think deeply about why
-                ML systems break in production.
+                I'm a third-year CE student at DJ Sanghavi, and I didn't wait for a degree to
+                do real work. I build adaptive speech pipelines, deploy fraud detectors, and
+                research why Federated Learning breaks under attack at DJS Anveshan. I compete
+                in hackathons and automate workflows with n8n. When a model fails in production,
+                I want to know exactly why.
             </p>
             <div class="hero-actions">
                 <a href="#projects" class="btn-primary">View My Work</a>
@@ -97,18 +97,12 @@
                     and <strong>production AI systems</strong> like cash-flow forecasting deployed during my internship.
                 </p>
                 <p>
-                    I care about ML that is <strong>rigorous, explainable, and production-ready</strong>.
-                    No shortcuts on data leakage, no skipping evaluation, no hand-wavy results.
-                </p>
-                <p>
                     I don't trust a result I haven't tried to break first. Most of what I build gets
-                    re-evaluated harder than it needs to be for a demo: walk-forward backtests instead
-                    of a single split, phoneme-level error diagnosis instead of trusting a CER number,
-                    explicit drift monitoring instead of assuming a model stays good. I'd rather ship
-                    something slower that's actually validated than something fast that just looks
-                    finished. That extends to how I learn, too. When I use AI to move quickly on
-                    something, I go back and rebuild the parts I didn't actually understand, closed-book,
-                    before I count it as a real skill.
+                    re-evaluated harder than a demo needs: walk-forward backtests instead of a single
+                    split, phoneme-level error diagnosis instead of trusting a CER number, drift
+                    monitoring instead of assuming a model stays good. I'd rather ship something slower
+                    that holds up than something fast that only looks finished. No shortcuts on data
+                    leakage, no skipping evaluation.
                 </p>
             </div>
             <div class="about-right fade-in">
@@ -140,6 +134,24 @@
                         <p>Cash-flow prediction with Chronos-2, walk-forward backtesting, and bias correction for skewed data.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="strengths fade-in">
+            <div class="strength-card">
+                <h4>Validation over demos</h4>
+                <p>Walk-forward backtests, phoneme-level error diagnosis, explicit drift
+                   monitoring. I re-check my own results harder than a demo needs.</p>
+            </div>
+            <div class="strength-card">
+                <h4>Ships to production</h4>
+                <p>Cash-flow forecasting deployed during my internship. I build pipelines to
+                   run under real load, not to survive a five-minute presentation.</p>
+            </div>
+            <div class="strength-card">
+                <h4>Learns closed-book</h4>
+                <p>When I use AI to move fast, I rebuild the parts I didn't understand from
+                   scratch before I count it as a skill I actually have.</p>
             </div>
         </div>
     </div>
@@ -768,6 +780,19 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="n8n-project-card">
+                            <div class="n8n-project-icon">📊</div>
+                            <div>
+                                <h4 class="n8n-project-title">AI Feature Adoption Analysis</h4>
+                                <p class="n8n-project-desc">Diagnosed why customers weren't recharging coins for the company's AI features. Built a cleaning + analysis pipeline over raw coin-ledger data (credit buckets, JSON transaction history) spanning 8+ AI modules — Chanakya Bot, OCR Pro, CV Analysis, Chanakya Vaani, CRM Bot, ML Predictions, BOQ/AutoCAD, Site Vision AI — surfacing funnel drop-off, feature adoption, churn, and cohort retention in a self-contained HTML report.</p>
+                                <div class="project-stack" style="margin-top:8px;">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Pandas</span>
+                                    <span class="tech-tag">NumPy</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -797,109 +822,97 @@
             <h2 class="section-title">Continuous learning</h2>
             <p class="section-subtitle">Certifications earned alongside engineering.</p>
         </div>
-        <div class="courses-columns">
+        <div class="courses-grid fade-in">
 
-            <div class="courses-column fade-in">
-                <div class="courses-column-title">Completed</div>
-
-                <div class="course-card">
-                    <div class="course-provider">Kaggle</div>
-                    <div class="course-name">Intro to Machine Learning</div>
-                    <div class="course-meta">Kaggle Learn · 2025</div>
-                    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;">
-                        <div class="course-badge done">Completed</div>
-                        <a href="Certificate/Viraj Sanghavi - Intro to Machine Learning.png" target="_blank" style="font-size:12px;color:var(--accent);text-decoration:none;font-family:var(--font-mono);letter-spacing:0.04em;">View Certificate ↗</a>
-                    </div>
+            <div class="course-card">
+                <div class="course-provider">Kaggle</div>
+                <div class="course-name">Intro to Machine Learning</div>
+                <div class="course-meta">Kaggle Learn · 2025</div>
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;">
+                    <div class="course-badge done">Completed</div>
+                    <a href="Certificate/Viraj Sanghavi - Intro to Machine Learning.png" target="_blank" style="font-size:12px;color:var(--accent);text-decoration:none;font-family:var(--font-mono);letter-spacing:0.04em;">View Certificate ↗</a>
                 </div>
             </div>
 
-            <div class="courses-column fade-in">
-                <div class="courses-column-title">In Progress</div>
-
-                <div class="course-card">
-                    <div class="course-provider">DeepLearning.ai</div>
-                    <div class="course-name">Deep Learning Specialisation</div>
-                    <div class="course-meta">Andrew Ng · 5 courses</div>
-                    <div style="margin-top:12px;">
-                        <div class="course-badge wip">In Progress</div>
-                    </div>
-                </div>
-
-                <div class="course-card">
-                    <div class="course-provider">Great Learning</div>
-                    <div class="course-name">SQL for Data Science</div>
-                    <div class="course-meta">Great Learning · 2025</div>
-                    <div style="margin-top:12px;">
-                        <div class="course-badge wip">In Progress</div>
-                    </div>
+            <div class="course-card">
+                <div class="course-provider">DeepLearning.ai</div>
+                <div class="course-name">Deep Learning Specialisation</div>
+                <div class="course-meta">Andrew Ng · 5 courses</div>
+                <div style="margin-top:12px;">
+                    <div class="course-badge wip">In Progress</div>
                 </div>
             </div>
 
-            <div class="courses-column fade-in">
-                <div class="courses-column-title">Plan to Start</div>
-
-                <div class="course-card">
-                    <div class="course-provider">Kaggle Learn</div>
-                    <div class="course-name">Intermediate Machine Learning</div>
-                    <div class="course-meta">Kaggle</div>
-                    <div style="margin-top:12px;"><div class="course-badge planned">Planned</div></div>
+            <div class="course-card">
+                <div class="course-provider">Great Learning</div>
+                <div class="course-name">SQL for Data Science</div>
+                <div class="course-meta">Great Learning · 2025</div>
+                <div style="margin-top:12px;">
+                    <div class="course-badge wip">In Progress</div>
                 </div>
+            </div>
 
-                <div class="course-card">
-                    <div class="course-provider">Kaggle Learn</div>
-                    <div class="course-name">Feature Engineering</div>
-                    <div class="course-meta">Kaggle</div>
-                    <div style="margin-top:12px;"><div class="course-badge planned">Planned</div></div>
-                </div>
+            <div class="course-card">
+                <div class="course-provider">Kaggle Learn</div>
+                <div class="course-name">Intermediate Machine Learning</div>
+                <div class="course-meta">Kaggle</div>
+                <div style="margin-top:12px;"><div class="course-badge planned">Planned</div></div>
+            </div>
 
-                <div class="course-card">
-                    <div class="course-provider">Kaggle Learn</div>
-                    <div class="course-name">Intro to Deep Learning</div>
-                    <div class="course-meta">Kaggle</div>
-                    <div style="margin-top:12px;"><div class="course-badge planned">Planned</div></div>
-                </div>
+            <div class="course-card">
+                <div class="course-provider">Kaggle Learn</div>
+                <div class="course-name">Feature Engineering</div>
+                <div class="course-meta">Kaggle</div>
+                <div style="margin-top:12px;"><div class="course-badge planned">Planned</div></div>
+            </div>
 
-                <div class="course-card">
-                    <div class="course-provider">DeepLearning.ai</div>
-                    <div class="course-name">MLOps Specialization</div>
-                    <div class="course-meta">Coursera</div>
-                    <div style="margin-top:12px;"><div class="course-badge planned">Planned</div></div>
-                </div>
+            <div class="course-card">
+                <div class="course-provider">Kaggle Learn</div>
+                <div class="course-name">Intro to Deep Learning</div>
+                <div class="course-meta">Kaggle</div>
+                <div style="margin-top:12px;"><div class="course-badge planned">Planned</div></div>
+            </div>
 
-                <div class="course-card">
-                    <div class="course-provider">Amazon Web Services</div>
-                    <div class="course-name">AWS Certified Cloud Practitioner</div>
-                    <div class="course-meta">AWS</div>
-                    <div style="margin-top:12px;"><div class="course-badge planned">Planned</div></div>
-                </div>
+            <div class="course-card">
+                <div class="course-provider">DeepLearning.ai</div>
+                <div class="course-name">MLOps Specialization</div>
+                <div class="course-meta">Coursera</div>
+                <div style="margin-top:12px;"><div class="course-badge planned">Planned</div></div>
+            </div>
 
-                <div class="course-card">
-                    <div class="course-provider">freeCodeCamp</div>
-                    <div class="course-name">Algorithms and Data Structures</div>
-                    <div class="course-meta">freeCodeCamp</div>
-                    <div style="margin-top:12px;"><div class="course-badge planned">Planned</div></div>
-                </div>
+            <div class="course-card">
+                <div class="course-provider">Amazon Web Services</div>
+                <div class="course-name">AWS Certified Cloud Practitioner</div>
+                <div class="course-meta">AWS</div>
+                <div style="margin-top:12px;"><div class="course-badge planned">Planned</div></div>
+            </div>
 
-                <div class="course-card">
-                    <div class="course-provider">Georgia Tech</div>
-                    <div class="course-name">Machine Learning for Trading</div>
-                    <div class="course-meta">edX / Udacity</div>
-                    <div style="margin-top:12px;"><div class="course-badge planned">Planned</div></div>
-                </div>
+            <div class="course-card">
+                <div class="course-provider">freeCodeCamp</div>
+                <div class="course-name">Algorithms and Data Structures</div>
+                <div class="course-meta">freeCodeCamp</div>
+                <div style="margin-top:12px;"><div class="course-badge planned">Planned</div></div>
+            </div>
 
-                <div class="course-card">
-                    <div class="course-provider">Stanford</div>
-                    <div class="course-name">CS224W: Machine Learning with Graphs</div>
-                    <div class="course-meta">Self-paced, no formal cert</div>
-                    <div style="margin-top:12px;"><div class="course-badge planned">Planned</div></div>
-                </div>
+            <div class="course-card">
+                <div class="course-provider">Georgia Tech</div>
+                <div class="course-name">Machine Learning for Trading</div>
+                <div class="course-meta">edX / Udacity</div>
+                <div style="margin-top:12px;"><div class="course-badge planned">Planned</div></div>
+            </div>
 
-                <div class="course-card">
-                    <div class="course-provider">DeepLearning.ai</div>
-                    <div class="course-name">LangChain / LLM Agents / RAG Short Courses</div>
-                    <div class="course-meta">Free, ~1-2 hrs each</div>
-                    <div style="margin-top:12px;"><div class="course-badge planned">Planned</div></div>
-                </div>
+            <div class="course-card">
+                <div class="course-provider">Stanford</div>
+                <div class="course-name">CS224W: Machine Learning with Graphs</div>
+                <div class="course-meta">Self-paced, no formal cert</div>
+                <div style="margin-top:12px;"><div class="course-badge planned">Planned</div></div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-provider">DeepLearning.ai</div>
+                <div class="course-name">LangChain / LLM Agents / RAG Short Courses</div>
+                <div class="course-meta">Free, ~1-2 hrs each</div>
+                <div style="margin-top:12px;"><div class="course-badge planned">Planned</div></div>
             </div>
 
         </div>

@@ -571,6 +571,24 @@ section { padding: var(--section-gap) 0; }
 .interest-content h4 { font-size:15px; font-weight:600; color:var(--text-primary); margin-bottom:4px; }
 .interest-content p  { font-size:13px; color:var(--text-muted); line-height:1.5; }
 
+/* Strengths band below the About grid */
+.strengths {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.strength-card {
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--bg-card);
+    transition: border-color var(--transition), transform var(--transition);
+}
+.strength-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+.strength-card h4 { font-size:15px; font-weight:600; color:var(--text-primary); margin-bottom:8px; }
+.strength-card p  { font-size:14px; color:var(--text-muted); line-height:1.6; }
+
 /* =====================================================
    PROJECTS SECTION
    ===================================================== */
@@ -1267,6 +1285,7 @@ footer span { color:var(--accent); }
     :root { --section-gap: 80px; }
     .about-grid,
     .contact-wrapper { grid-template-columns:1fr; gap:44px; }
+    .strengths { grid-template-columns:1fr; }
     .skills-grid,
     .courses-grid { grid-template-columns:repeat(2,1fr); }
     .skills-grid .skill-category { grid-column:auto; }
