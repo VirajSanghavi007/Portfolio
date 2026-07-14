@@ -23,7 +23,7 @@ cv:
         degree: B.Tech
         date:
         start_date: 2024-09
-        end_date: 2028-06
+        end_date: present
         location: Mumbai, India
         summary: 'CGPA: 9.15'
         highlights:
@@ -93,6 +93,9 @@ design:
     right_margin: 1.5cm
   typography:
     line_spacing: 0.55em
+  links:
+    underline: true
+    show_external_link_icon: false
   sections:
     space_between_regular_entries: 0.6em
     space_between_text_based_entries: 0.15em
