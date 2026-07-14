@@ -28,7 +28,7 @@ cv:
         summary: 'CGPA: 9.15'
         highlights:
     experience:
-      - company: Enterprise Software Company
+      - company: ITAakash Strategic Software Pvt. Ltd.
         position: Developer Intern
         date:
         start_date: 2026-06
@@ -45,7 +45,7 @@ cv:
         start_date: 2025-01
         end_date: present
         location:
-        summary: Real-time Anti-Money Laundering detection on a transaction multigraph
+        summary:
         highlights:
           - 'Started as Argus at iDEA 2.0 (Union Bank of India PS3, Team Zeta, Top 40+ finalist); continued past the hackathon under the name Vigilia'
           - Built graph-native AML system detecting 8 structural typologies plus 7 behavioural signals (structuring, smurfing, layering) on 500K+ IBM synthetic transactions, rebuilt since on a Multi-GNN (PNAConv + GINEConv) classifying transactions directly on the multigraph
@@ -55,9 +55,9 @@ cv:
         start_date: 2025-01
         end_date: present
         location:
-        summary: Closed-loop speech recognition with phoneme-level error diagnosis
+        summary:
         highlights:
-          - Built a research-grade adaptive ASR pipeline - Wav2Vec2 transcription, 8-feature acoustic noise fingerprinting across 5 environment categories, and TTS-driven closed-loop remediation
+          - 'Built a research-grade adaptive ASR pipeline: Wav2Vec2 transcription, 8-feature acoustic noise fingerprinting across 5 environment categories, and TTS-driven closed-loop remediation'
           - Implemented a phoneme-level drift monitor (20-utterance rolling window) plus 5+ published techniques including AdaLoRA (Zhang et al., ICLR 2023) and HDMoLE LoRA-MoE routing (Mu et al., ICASSP 2025)
           - Deployed full-stack system (FastAPI, React, PostgreSQL, Docker) with CI/CD via GitHub Actions on Render
       - name: '[Fortuna](https://github.com/VirajSanghavi007/Fortuna) - Algorithmic Trading System'
@@ -65,7 +65,7 @@ cv:
         start_date: '2025'
         end_date:
         location:
-        summary: Multi-asset trading system spanning equities and crypto
+        summary:
         highlights:
           - Built a stacked RF/XGBoost/LightGBM ensemble with regime routing across 20+ equities and crypto pairs, backtested via walk-forward optimization (Sharpe up to 3.46), with SHAP/LIME explainability, drift monitoring, and a 144-test suite
     research:
@@ -77,18 +77,18 @@ cv:
         location: Dwarkadas J. Sanghvi College of Engineering
         summary:
         highlights:
-          - Authored a problem discovery report on a critical Federated Learning failure mode - robust aggregation filters (Krum, FLAME) silently discarding valid non-IID updates from minority institutions in cross-institutional fraud detection
+          - 'Authored a problem discovery report on a critical Federated Learning failure mode: robust aggregation filters (Krum, FLAME) silently discarding valid non-IID updates from minority institutions in cross-institutional fraud detection'
           - Identified an unaddressed gap in FL security literature as of 2025, citing IEEE Transactions on Big Data and JPMorgan's Project Aikya
     skills:
       - label: Languages / Infra
         details: Python, SQL, TypeScript, Bash, C++, Git, Docker, FastAPI, React, PostgreSQL, n8n
       - label: ML / Data
-        details: PyTorch, PyTorch Geometric, scikit-learn, XGBoost, LightGBM, NumPy, Pandas, Hugging Face, MLflow
+        details: PyTorch, PyTorch Geometric, scikit-learn, XGBoost, LightGBM, NumPy, Pandas, Hugging Face
 design:
   theme: engineeringresumes
   page:
-    top_margin: 1cm
-    bottom_margin: 1cm
+    top_margin: 0.8cm
+    bottom_margin: 0.8cm
     left_margin: 1.5cm
     right_margin: 1.5cm
   typography:
