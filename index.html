@@ -27,7 +27,9 @@
         <ul class="nav-links">
             <li><a href="#about">about</a></li>
             <li><a href="#projects">projects</a></li>
+            <li><a href="#systems">systems</a></li>
             <li><a href="#hackathons">hackathons</a></li>
+            <li><a href="#achievements">achievements</a></li>
             <li><a href="#research">research</a></li>
             <li><a href="#skills">skills</a></li>
             <li><a href="#experience">experience</a></li>
@@ -459,6 +461,174 @@
 </section>
 
 
+<!-- ===================== SYSTEMS ENGINEERING ===================== -->
+<section id="systems">
+    <div class="container">
+        <div class="fade-in">
+            <h2 class="section-title">Systems Engineering</h2>
+            <p class="section-subtitle">
+                Long-horizon, solo, no-black-boxes builds — a ~2-year track running alongside
+                the applied ML work above. Each one is deliberately slow: the goal is
+                understanding every layer, not shipping fast.
+            </p>
+        </div>
+
+        <div class="projects-grid">
+
+            <div class="project-card fade-in">
+                <div class="project-visual" style="background:linear-gradient(135deg,#1a0e0a,rgba(217,119,6,0.15));display:flex;align-items:center;justify-content:center;">
+                    <span class="project-visual-icon">🔥</span>
+                </div>
+                <div class="project-header">
+                    <div>
+                        <span class="project-tag">Systems · CPU Performance</span>
+                        <span class="course-badge wip" style="font-size:10px;padding:2px 10px;margin-bottom:6px;display:inline-block;">In Progress</span>
+                        <h3 class="project-title">Vulcan</h3>
+                        <p class="project-name-story">Roman god of the forge - fire, metalwork, things built by hand at the hottest possible layer. A CPU is exactly that: heat, silicon, and raw computation, forged rather than assumed.</p>
+                        <p class="project-desc">
+                            A CPU-first LLM inference optimizer, built from scratch with every optimization
+                            understood and explainable, no black boxes. Quantization, KV caching, SIMD (AVX2),
+                            multithreading, and cache-aware memory layout, each implemented and benchmarked
+                            by hand before reaching for a library that does it for you.
+                        </p>
+                        <div class="project-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">NumPy</span>
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">SIMD / AVX2</span>
+                            <span class="tech-tag">pytest</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <div class="project-links">
+                            <a href="https://github.com/VirajSanghavi007/Vulcan" target="_blank" class="project-link" title="GitHub">
+                                <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
+                        </div>
+                        <button class="writeup-toggle" onclick="toggleWriteup(this)">read writeup <span class="writeup-arrow">▾</span></button>
+                    </div>
+                </div>
+                <div class="project-writeup">
+                    <div class="writeup-content">
+                        <h4>Why</h4>
+                        <p>Every optimization technique used to speed up LLM inference is available as a one-line library call. Vulcan exists to close the gap between "I can call this function" and "I understand exactly why it's faster," by building each layer from scratch before using the library version.</p>
+                        <h4>Scope</h4>
+                        <ul>
+                            <li>Tensors and numerics: how floating-point math actually works, and where it silently breaks</li>
+                            <li>Quantization: representing weights in int8/int4 without breaking the model</li>
+                            <li>KV cache: why attention recomputation is wasteful, and how caching fixes it</li>
+                            <li>SIMD (AVX2): doing math on many numbers per CPU instruction</li>
+                            <li>Multithreading and memory layout: using all available cores and CPU caches well</li>
+                        </ul>
+                        <h4>Status</h4>
+                        <p>Engineering foundations complete: package layout, virtualenv, tests, debugger, a hand-resolved merge conflict. Currently on floating-point numerics, the first of the core technical stages.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-visual" style="background:linear-gradient(135deg,#0a0a1a,rgba(139,92,246,0.15));display:flex;align-items:center;justify-content:center;">
+                    <span class="project-visual-icon">🗝️</span>
+                </div>
+                <div class="project-header">
+                    <div>
+                        <span class="project-tag">Systems · Reverse Engineering</span>
+                        <span class="course-badge wip" style="font-size:10px;padding:2px 10px;margin-bottom:6px;display:inline-block;">In Progress</span>
+                        <h3 class="project-title">Janus</h3>
+                        <p class="project-name-story">Two faces - one looks at the binary, the other looks at what it means. Reverse engineering is exactly that split: the disassembler gives you what the machine does, never why.</p>
+                        <p class="project-desc">
+                            An AI-assisted reverse engineering toolkit that sits on top of a disassembler
+                            (Ghidra / IDA / radare2), using an LLM as a standing analyst over decompiled
+                            output: structural triage via call-graph ranking, semantic function annotation,
+                            anomaly flagging, and explain-on-demand for any single function.
+                        </p>
+                        <div class="project-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Ghidra</span>
+                            <span class="tech-tag">radare2</span>
+                            <span class="tech-tag">Capstone</span>
+                            <span class="tech-tag">Anthropic API</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <div class="project-links">
+                            <a href="https://github.com/VirajSanghavi007/Janus" target="_blank" class="project-link" title="GitHub">
+                                <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
+                        </div>
+                        <button class="writeup-toggle" onclick="toggleWriteup(this)">read writeup <span class="writeup-arrow">▾</span></button>
+                    </div>
+                </div>
+                <div class="project-writeup">
+                    <div class="writeup-content">
+                        <h4>Why</h4>
+                        <p>Reverse engineering a stripped binary is slow for a structural reason: a disassembler gives you what the machine does, never why. A human analyst spends most of their time re-deriving intent from raw control flow, exactly the inference step an LLM is strong at and traditional tooling is silent on.</p>
+                        <h4>Scope</h4>
+                        <ul>
+                            <li>Structural triage: call-graph construction, ranking functions by centrality and complexity</li>
+                            <li>Semantic annotation: proposing names and behavioral summaries for stripped functions</li>
+                            <li>Anomaly flagging: surfacing functions whose behavior doesn't match their apparent purpose</li>
+                            <li>Explain-on-demand: a plain-language walkthrough of any single function's assembly, reasoning shown</li>
+                        </ul>
+                        <h4>Status</h4>
+                        <p>Structure and intent defined, implementation in progress.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-visual" style="background:linear-gradient(135deg,#0a141a,rgba(6,182,212,0.15));display:flex;align-items:center;justify-content:center;">
+                    <span class="project-visual-icon">🏛️</span>
+                </div>
+                <div class="project-header">
+                    <div>
+                        <span class="project-tag">Systems · Distributed Systems</span>
+                        <span class="course-badge wip" style="font-size:10px;padding:2px 10px;margin-bottom:6px;display:inline-block;">In Progress</span>
+                        <h3 class="project-title">Concordia</h3>
+                        <p class="project-name-story">Roman goddess of agreement - invoked when the Senate needed many voices to become one decision. A distributed system's whole problem is exactly that: many nodes, no single source of truth, forced to agree anyway.</p>
+                        <p class="project-desc">
+                            A distributed key-value store built from scratch around the Raft consensus
+                            protocol - replicated log, leader election, log compaction - the coordination
+                            layer every real distributed database quietly depends on.
+                        </p>
+                        <div class="project-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">gRPC</span>
+                            <span class="tech-tag">Raft</span>
+                            <span class="tech-tag">pytest</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <div class="project-links">
+                            <a href="https://github.com/VirajSanghavi007/Concordia" target="_blank" class="project-link" title="GitHub">
+                                <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
+                        </div>
+                        <button class="writeup-toggle" onclick="toggleWriteup(this)">read writeup <span class="writeup-arrow">▾</span></button>
+                    </div>
+                </div>
+                <div class="project-writeup">
+                    <div class="writeup-content">
+                        <h4>Why</h4>
+                        <p>A single-node key-value store is a solved, uninteresting problem. The moment you replicate it across machines that can crash, partition, or lie about their own state, every assumption from single-node programming breaks - and that's the terrain Concordia is built to learn on the hard way, not read about.</p>
+                        <h4>Scope</h4>
+                        <ul>
+                            <li>Leader election: timeout-based failure detection and randomized-timeout election</li>
+                            <li>Replicated log: writes committed only after majority replication, surviving leader crash</li>
+                            <li>Log compaction: periodic snapshotting so the replicated log doesn't grow unbounded</li>
+                            <li>Client-facing KV API: get/put/delete on top of the consensus layer</li>
+                        </ul>
+                        <h4>Status</h4>
+                        <p>Core Raft state machine (leader election and log replication) is the current focus, before layering compaction and the client API on top.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
 <!-- ===================== HACKATHONS ===================== -->
 <section id="hackathons" style="background:var(--bg-surface)">
     <div class="container">
@@ -525,6 +695,24 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== ACHIEVEMENTS ===================== -->
+<section id="achievements" style="background:var(--bg-surface)">
+    <div class="container">
+        <div class="fade-in">
+            <h2 class="section-title">Achievements</h2>
+            <p class="section-subtitle">Nothing to show yet - but I intend to.</p>
+        </div>
+        <div class="strengths fade-in">
+            <div class="strength-card" style="border-style:dashed;">
+                <h4>🏆 First one's coming</h4>
+                <p>No competition wins or awards on record yet. Given the systems and ML work
+                   above, that's the next thing to change, not a gap I'm ignoring.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -806,7 +994,7 @@
                 <ul class="timeline-points">
                     <li>Semester 5 (ongoing) · CGPA: 9.15</li>
                     <li>Relevant coursework: Data Structures, Algorithms, Statistics, Machine Learning</li>
-                    <li>Member of DJS Anveshan research club, researching failure modes in Federated Learning</li>
+                    <li>Member, Research and Publicity Department, DJS Anveshan - researching failure modes in Federated Learning</li>
                 </ul>
             </div>
 
