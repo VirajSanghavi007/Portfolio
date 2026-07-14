@@ -662,11 +662,11 @@
                     <div class="timeline-role">Developer Intern</div>
                     <div class="timeline-period">Jun 2026 – Aug 2026</div>
                 </div>
-                <div class="timeline-org">Enterprise Software Company, Development</div>
+                <div class="timeline-org">ITAakash Strategic Software Pvt. Ltd., Development</div>
                 <ul class="timeline-points">
-                    <li>Built an AI cash-flow forecasting pipeline using time-series models, walk-forward validation, bias correction, and a Flask API backed by PostgreSQL for integration with internal business systems</li>
-                    <li>Developed a behavioral analytics workflow for AI feature usage, including KPI dashboards, funnel analysis, customer segmentation, NLP query clustering, usage forecasting, and retention analysis</li>
-                    <li>Translated adoption and usage patterns into product insights that helped distinguish activation gaps from feature-value gaps</li>
+                    <li>Built an AI cash-flow forecasting system using Amazon Chronos-2, replacing a legacy XGBoost pipeline, achieving ~82-85% volume accuracy on company-level monthly predictions</li>
+                    <li>Designed a Flask API serving 365-day forecasts per (project, ledger, company) group, integrated into the existing Java EE ERP via PostgreSQL</li>
+                    <li>Implemented walk-forward backtesting (5 rolling origins, 4-month horizon) with bias correction for right-skewed construction cash flow data</li>
                 </ul>
                 <button class="writeup-toggle" onclick="toggleInternshipProjects()" style="margin-top:8px;">
                     Show Projects <span class="internship-arrow">▾</span>
@@ -677,28 +677,12 @@
                             <div class="n8n-project-icon">💰</div>
                             <div>
                                 <h4 class="n8n-project-title">AI Cash-Flow Forecasting</h4>
-                                <p class="n8n-project-desc">Production-oriented forecasting system for daily cash-flow prediction across grouped financial records. Built model evaluation with walk-forward backtesting, added bias correction for skewed data, and exposed forecasts through a Flask API with PostgreSQL persistence.</p>
+                                <p class="n8n-project-desc">Production system predicting daily net cash flow across 1,645 ledger groups and 6,052 projects. Chronos-2 zero-shot transformer behind a Flask API, feeding PostgreSQL for a Java EE ERP balance sheet view.</p>
                                 <div class="project-stack" style="margin-top:8px;">
                                     <span class="tech-tag">Python</span>
                                     <span class="tech-tag">Chronos-2</span>
                                     <span class="tech-tag">Flask</span>
                                     <span class="tech-tag">PostgreSQL</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="n8n-project-card">
-                            <div class="n8n-project-icon">📊</div>
-                            <div>
-                                <h4 class="n8n-project-title">AI Feature Adoption Analytics</h4>
-                                <p class="n8n-project-desc">End-to-end product analytics pipeline for AI feature adoption. Cleaned noisy usage data, built KPI and funnel views, created behavioral segments with K-Means, clustered user queries with sentence-transformers, and added predictive models for usage and retention trends.</p>
-                                <div class="project-stack" style="margin-top:8px;">
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">Pandas</span>
-                                    <span class="tech-tag">scikit-learn</span>
-                                    <span class="tech-tag">K-Means</span>
-                                    <span class="tech-tag">sentence-transformers</span>
-                                    <span class="tech-tag">Chronos-T5</span>
-                                    <span class="tech-tag">Random Forest</span>
                                 </div>
                             </div>
                         </div>
