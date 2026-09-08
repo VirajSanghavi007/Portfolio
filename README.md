@@ -12,12 +12,19 @@ Personal portfolio website built as a single HTML/CSS/JS file. No frameworks, no
 ## Structure
 
 ```
-Portofolio/
-├── index.html               # Everything — markup, styles, and scripts in one file
-├── contact.js               # EmailJS form handler
-├── favicon.png              # Site favicon and navbar logo
-├── Resume (4th June).pdf
-└── render.yaml              # Render deployment config
+Portfolio/
+├── index.html               # Markup
+├── styles.css                # Styles
+├── script.js                 # Animations, theme toggle, nav behavior
+├── contact.js                # EmailJS form handler
+├── render.yaml                # Render deployment config
+├── Images/
+│   ├── Favicon.png           # Site favicon and navbar logo
+│   └── profile.jpg
+├── Resume/
+│   ├── resume.pdf
+│   └── Viraj_Sanghavi_CV.yaml # rendercv source
+└── Certificate/               # Certificate images shown in Continuous Learning
 ```
 
 ## Local Development

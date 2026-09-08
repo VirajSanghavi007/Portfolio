@@ -62,7 +62,7 @@ document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
 
 // Typing animation for the hero tagline
 const phrases = [
-    'ML / AI Engineer',
+    'AI/ML Engineer',
     'Building in Finance, Logistics, Speech',
     'Third Year CE at DJ Sanghavi',
     'Deep Learning Practitioner',

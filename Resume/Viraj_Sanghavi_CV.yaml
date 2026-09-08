@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
 cv:
   name: Viraj Sanghavi
-  headline:
+  headline: AI/ML Engineer
   location: Mumbai, India
   email: virajsanghavi000@gmail.com
   photo:
@@ -60,14 +60,6 @@ cv:
           - 'Built a research-grade adaptive ASR pipeline: Wav2Vec2 transcription, 8-feature acoustic noise fingerprinting across 5 environment categories, and TTS-driven closed-loop remediation'
           - Implemented a phoneme-level drift monitor (20-utterance rolling window) plus 5+ published techniques including AdaLoRA (Zhang et al., ICLR 2023) and HDMoLE LoRA-MoE routing (Mu et al., ICASSP 2025)
           - Deployed full-stack system (FastAPI, React, PostgreSQL, Docker) with CI/CD via GitHub Actions on Render
-      - name: '[Fortuna](https://github.com/VirajSanghavi007/Fortuna) - Algorithmic Trading System'
-        date:
-        start_date: '2025'
-        end_date:
-        location:
-        summary:
-        highlights:
-          - Built a stacked RF/XGBoost/LightGBM ensemble with regime routing across 20+ equities and crypto pairs, backtested via walk-forward optimization (Sharpe up to 3.46), with SHAP/LIME explainability, drift monitoring, and a 144-test suite
     research:
       - company: DJS Anveshan - Research Club
         position: Publicity & Research Member
