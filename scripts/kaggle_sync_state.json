@@ -1,7 +1,8 @@
 {
   "known_refs": [
-    "virajsanghavi007/mushroom-classification-with-nn-99-9-acc",
     "virajsanghavi007/student-performance-using-rf-with-mae-3-0150",
+    "virajsanghavi007/mushroom-classification-with-nn-99-9-acc",
+    "virajsanghavi007/chest-x-ray-images-pneumonia-auc-0-9576",
     "virajsanghavi007/human-activity-recognition-accuracy-96-2"
   ]
 }
