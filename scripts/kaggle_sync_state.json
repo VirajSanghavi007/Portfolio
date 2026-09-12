@@ -1,8 +1,20 @@
 {
   "known_refs": [
-    "virajsanghavi007/student-performance-using-rf-with-mae-3-0150",
+    "virajsanghavi007/indian-liver-patient-dataset-auc-pr-0-896",
+    "virajsanghavi007/medical-cost-personal-datasets-mae-2337-30",
     "virajsanghavi007/mushroom-classification-with-nn-99-9-acc",
+    "virajsanghavi007/rice-image-dataset-f1-99-81",
     "virajsanghavi007/chest-x-ray-images-pneumonia-auc-0-9576",
-    "virajsanghavi007/human-activity-recognition-accuracy-96-2"
+    "virajsanghavi007/human-activity-recognition-accuracy-96-2",
+    "virajsanghavi007/olympic-classification-time-series-auc-roc-0-91",
+    "virajsanghavi007/iris-species-roc-auc-0-97",
+    "virajsanghavi007/used-cars-price-prediction-mae-1-587",
+    "virajsanghavi007/house-sales-king-county-mae-66149-13",
+    "virajsanghavi007/crop-recommendation-dataset-roc-auc-1-00",
+    "virajsanghavi007/diamonds-price-prediction-mae-260-26",
+    "virajsanghavi007/red-wine-quality-mae-0-42",
+    "virajsanghavi007/diabetes-prediction-dataset-roc-auc-0-98",
+    "virajsanghavi007/california-housing-prices-mae-29085-51",
+    "virajsanghavi007/student-performance-using-rf-with-mae-3-0150"
   ]
 }
