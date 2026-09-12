@@ -20,6 +20,7 @@ QUERY = """
 query getUserProfile($username: String!) {
   matchedUser(username: $username) {
     username
+    profile { ranking }
     submitStatsGlobal { acSubmissionNum { difficulty count } }
   }
   allQuestionsCount { difficulty count }
@@ -52,15 +53,17 @@ def main():
     easy, easy_total = solved.get("Easy", 0), total_q.get("Easy", 0)
     medium, medium_total = solved.get("Medium", 0), total_q.get("Medium", 0)
     hard, hard_total = solved.get("Hard", 0), total_q.get("Hard", 0)
+    ranking = data["data"]["matchedUser"]["profile"]["ranking"]
 
     content = INDEX_FILE.read_text(encoding="utf-8")
     content = re.sub(r'(id="lcTotal" data-target=")\d+(")', rf"\g<1>{total}\g<2>", content)
     content = re.sub(r'(id="lcEasy">)[^<]*(</span>)', rf"\g<1>{easy} / {easy_total}\g<2>", content)
     content = re.sub(r'(id="lcMedium">)[^<]*(</span>)', rf"\g<1>{medium} / {medium_total}\g<2>", content)
     content = re.sub(r'(id="lcHard">)[^<]*(</span>)', rf"\g<1>{hard} / {hard_total}\g<2>", content)
+    content = re.sub(r'(id="lcRanking">)[^<]*(</span>)', rf"\g<1>#{ranking:,}\g<2>", content)
     INDEX_FILE.write_text(content, encoding="utf-8")
 
-    print(f"LeetCode synced: total={total} easy={easy}/{easy_total} medium={medium}/{medium_total} hard={hard}/{hard_total}")
+    print(f"LeetCode synced: total={total} easy={easy}/{easy_total} medium={medium}/{medium_total} hard={hard}/{hard_total} ranking=#{ranking}")
 
 
 if __name__ == "__main__":
