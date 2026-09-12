@@ -1,4 +1,4 @@
-name: Daily Codeforces/LeetCode Sync
+name: Daily GitHub/Codeforces/LeetCode Sync
 
 on:
   schedule:
@@ -19,6 +19,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Run GitHub sync
+        run: python scripts/github_sync.py
+
       - name: Run Codeforces sync
         run: python scripts/codeforces_sync.py
 
@@ -31,7 +34,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           if ! git diff --quiet -- index.html; then
             git add index.html
-            git commit -m "Auto-sync Codeforces/LeetCode stats"
+            git commit -m "Auto-sync GitHub/Codeforces/LeetCode stats"
             git push
           else
             echo "No stat changes, nothing to commit."
