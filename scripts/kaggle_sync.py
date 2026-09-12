@@ -15,7 +15,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 STATE_FILE = REPO_ROOT / "scripts" / "kaggle_sync_state.json"
 INDEX_FILE = REPO_ROOT / "index.html"
-GRID_MARKER = '<div class="courses-grid fade-in" id="kaggleGrid">'
+GRID_MARKER = '<div class="kaggle-list" id="kaggleGrid">'
 
 
 def run(cmd):
@@ -78,16 +78,18 @@ def get_dataset_metadata(ref):
 
 
 def build_card(title, url, kind, date_str):
-    return f'''
-            <div class="course-card">
-                <div class="course-provider">{kind}</div>
-                <div class="course-name">{title}</div>
-                <div class="course-meta">Kaggle · {date_str}</div>
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;">
-                    <div class="course-badge done">Public</div>
-                    <a href="{url}" target="_blank" style="font-size:12px;color:var(--accent);text-decoration:none;font-family:var(--font-mono);letter-spacing:0.04em;">View ↗</a>
+    kind_short = "NB" if kind == "Notebook" else "DS"
+    name_attr = title.replace('"', "&quot;").lower()
+    return f'''                <div class="kaggle-row" data-name="{name_attr}">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">{kind_short}</span>
+                        <span class="kaggle-row-name">{title}</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">{date_str}</span>
+                        <a class="kaggle-row-link" href="{url}" target="_blank">View ↗</a>
+                    </div>
                 </div>
-            </div>
 '''
 
 

@@ -806,171 +806,197 @@
             <h2 class="section-title">Kaggle</h2>
             <p class="section-subtitle">Public notebooks, auto-synced from my profile.</p>
         </div>
-        <div class="courses-grid fade-in" id="kaggleGrid">
-            <div class="course-card">
-                <div class="course-provider">Notebook</div>
-                <div class="course-name">Rice Image Dataset (F1 99.81)</div>
-                <div class="course-meta">Kaggle · recently published</div>
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;">
-                    <div class="course-badge done">Public</div>
-                    <a href="https://www.kaggle.com/code/virajsanghavi007/rice-image-dataset-f1-99-81" target="_blank" style="font-size:12px;color:var(--accent);text-decoration:none;font-family:var(--font-mono);letter-spacing:0.04em;">View ↗</a>
+        <div class="fade-in">
+            <div class="kaggle-toolbar">
+                <input type="text" class="kaggle-search" id="kaggleSearch" placeholder="Search notebooks…" oninput="filterKaggle()">
+                <span class="kaggle-count" id="kaggleCount"></span>
+            </div>
+            <div class="kaggle-list" id="kaggleGrid">
+                <div class="kaggle-row" data-name="rice image dataset f1 99.81">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Rice Image Dataset (F1 99.81)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">recently published</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/rice-image-dataset-f1-99-81" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="california housing prices mae 29085.51">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">California Housing Prices (MAE 29085.51)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">recently published</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/california-housing-prices-mae-29085-51" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="medical cost personal datasets mae 2337.30">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Medical Cost Personal Datasets MAE 2337.30</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">recently published</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/medical-cost-personal-datasets-mae-2337-30" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="red wine quality mae 0.42">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Red Wine Quality (MAE 0.42)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">recently published</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/red-wine-quality-mae-0-42" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="house sales king county mae 66149.13">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">House Sales King County (MAE 66149.13)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">recently published</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/house-sales-king-county-mae-66149-13" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="iris species roc-auc 0.97">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Iris Species (ROC-AUC 0.97)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">recently published</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/iris-species-roc-auc-0-97" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="crop recommendation dataset roc-auc 1.00">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Crop Recommendation Dataset (ROC-AUC 1.00)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">recently published</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/crop-recommendation-dataset-roc-auc-1-00" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="diamonds price prediction mae 260.26">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Diamonds Price Prediction (MAE 260.26)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">recently published</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/diamonds-price-prediction-mae-260-26" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="diabetes prediction dataset roc-auc 0.98">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Diabetes Prediction Dataset (ROC-AUC 0.98)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">recently published</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/diabetes-prediction-dataset-roc-auc-0-98" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="indian liver patient dataset auc-pr 0.896">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Indian Liver Patient Dataset (AUC-PR 0.896)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">recently published</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/indian-liver-patient-dataset-auc-pr-0-896" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="used cars price prediction mae 1,587">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Used Cars Price Prediction (MAE 1,587)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">recently published</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/used-cars-price-prediction-mae-1-587" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="olympic classification time series auc-roc 0.91">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Olympic Classification Time Series (AUC-ROC: 0.91)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">recently published</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/olympic-classification-time-series-auc-roc-0-91" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="chest x-ray images pneumonia auc 0.9576">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Chest X-Ray Images (Pneumonia) (AUC 0.9576)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">recently published</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/chest-x-ray-images-pneumonia-auc-0-9576" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="mushroom classification with nn 99.9% acc">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Mushroom Classification with NN (99.9% Acc)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">2026-08-27</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/mushroom-classification-with-nn-99-9-acc" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="student performance using rf mae 3.0150">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Student Performance using RF (MAE 3.0150)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">2026-08-28</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/student-performance-using-rf-with-mae-3-0150" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="human activity recognition accuracy 96.2%">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Human Activity Recognition (Accuracy 96.2%)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">2026-09-10</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/human-activity-recognition-accuracy-96-2" target="_blank">View ↗</a>
+                    </div>
                 </div>
             </div>
-
-            <div class="course-card">
-                <div class="course-provider">Notebook</div>
-                <div class="course-name">California Housing Prices (MAE 29085.51)</div>
-                <div class="course-meta">Kaggle · recently published</div>
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;">
-                    <div class="course-badge done">Public</div>
-                    <a href="https://www.kaggle.com/code/virajsanghavi007/california-housing-prices-mae-29085-51" target="_blank" style="font-size:12px;color:var(--accent);text-decoration:none;font-family:var(--font-mono);letter-spacing:0.04em;">View ↗</a>
-                </div>
-            </div>
-
-            <div class="course-card">
-                <div class="course-provider">Notebook</div>
-                <div class="course-name">Medical Cost Personal Datasets MAE 2337.30</div>
-                <div class="course-meta">Kaggle · recently published</div>
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;">
-                    <div class="course-badge done">Public</div>
-                    <a href="https://www.kaggle.com/code/virajsanghavi007/medical-cost-personal-datasets-mae-2337-30" target="_blank" style="font-size:12px;color:var(--accent);text-decoration:none;font-family:var(--font-mono);letter-spacing:0.04em;">View ↗</a>
-                </div>
-            </div>
-
-            <div class="course-card">
-                <div class="course-provider">Notebook</div>
-                <div class="course-name">Red Wine Quality (MAE 0.42)</div>
-                <div class="course-meta">Kaggle · recently published</div>
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;">
-                    <div class="course-badge done">Public</div>
-                    <a href="https://www.kaggle.com/code/virajsanghavi007/red-wine-quality-mae-0-42" target="_blank" style="font-size:12px;color:var(--accent);text-decoration:none;font-family:var(--font-mono);letter-spacing:0.04em;">View ↗</a>
-                </div>
-            </div>
-
-            <div class="course-card">
-                <div class="course-provider">Notebook</div>
-                <div class="course-name">House Sales King County (MAE 66149.13)</div>
-                <div class="course-meta">Kaggle · recently published</div>
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;">
-                    <div class="course-badge done">Public</div>
-                    <a href="https://www.kaggle.com/code/virajsanghavi007/house-sales-king-county-mae-66149-13" target="_blank" style="font-size:12px;color:var(--accent);text-decoration:none;font-family:var(--font-mono);letter-spacing:0.04em;">View ↗</a>
-                </div>
-            </div>
-
-            <div class="course-card">
-                <div class="course-provider">Notebook</div>
-                <div class="course-name">Iris Species (ROC-AUC 0.97)</div>
-                <div class="course-meta">Kaggle · recently published</div>
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;">
-                    <div class="course-badge done">Public</div>
-                    <a href="https://www.kaggle.com/code/virajsanghavi007/iris-species-roc-auc-0-97" target="_blank" style="font-size:12px;color:var(--accent);text-decoration:none;font-family:var(--font-mono);letter-spacing:0.04em;">View ↗</a>
-                </div>
-            </div>
-
-            <div class="course-card">
-                <div class="course-provider">Notebook</div>
-                <div class="course-name">Crop Recommendation Dataset (ROC-AUC 1.00)</div>
-                <div class="course-meta">Kaggle · recently published</div>
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;">
-                    <div class="course-badge done">Public</div>
-                    <a href="https://www.kaggle.com/code/virajsanghavi007/crop-recommendation-dataset-roc-auc-1-00" target="_blank" style="font-size:12px;color:var(--accent);text-decoration:none;font-family:var(--font-mono);letter-spacing:0.04em;">View ↗</a>
-                </div>
-            </div>
-
-            <div class="course-card">
-                <div class="course-provider">Notebook</div>
-                <div class="course-name">Diamonds Price Prediction (MAE 260.26)</div>
-                <div class="course-meta">Kaggle · recently published</div>
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;">
-                    <div class="course-badge done">Public</div>
-                    <a href="https://www.kaggle.com/code/virajsanghavi007/diamonds-price-prediction-mae-260-26" target="_blank" style="font-size:12px;color:var(--accent);text-decoration:none;font-family:var(--font-mono);letter-spacing:0.04em;">View ↗</a>
-                </div>
-            </div>
-
-            <div class="course-card">
-                <div class="course-provider">Notebook</div>
-                <div class="course-name">Diabetes Prediction Dataset (ROC-AUC 0.98)</div>
-                <div class="course-meta">Kaggle · recently published</div>
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;">
-                    <div class="course-badge done">Public</div>
-                    <a href="https://www.kaggle.com/code/virajsanghavi007/diabetes-prediction-dataset-roc-auc-0-98" target="_blank" style="font-size:12px;color:var(--accent);text-decoration:none;font-family:var(--font-mono);letter-spacing:0.04em;">View ↗</a>
-                </div>
-            </div>
-
-            <div class="course-card">
-                <div class="course-provider">Notebook</div>
-                <div class="course-name">Indian Liver Patient Dataset (AUC-PR 0.896)</div>
-                <div class="course-meta">Kaggle · recently published</div>
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;">
-                    <div class="course-badge done">Public</div>
-                    <a href="https://www.kaggle.com/code/virajsanghavi007/indian-liver-patient-dataset-auc-pr-0-896" target="_blank" style="font-size:12px;color:var(--accent);text-decoration:none;font-family:var(--font-mono);letter-spacing:0.04em;">View ↗</a>
-                </div>
-            </div>
-
-            <div class="course-card">
-                <div class="course-provider">Notebook</div>
-                <div class="course-name">Used Cars Price Prediction (MAE 1,587)</div>
-                <div class="course-meta">Kaggle · recently published</div>
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;">
-                    <div class="course-badge done">Public</div>
-                    <a href="https://www.kaggle.com/code/virajsanghavi007/used-cars-price-prediction-mae-1-587" target="_blank" style="font-size:12px;color:var(--accent);text-decoration:none;font-family:var(--font-mono);letter-spacing:0.04em;">View ↗</a>
-                </div>
-            </div>
-
-            <div class="course-card">
-                <div class="course-provider">Notebook</div>
-                <div class="course-name">Olympic Classification Time Series (AUC-ROC: 0.91)</div>
-                <div class="course-meta">Kaggle · recently published</div>
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;">
-                    <div class="course-badge done">Public</div>
-                    <a href="https://www.kaggle.com/code/virajsanghavi007/olympic-classification-time-series-auc-roc-0-91" target="_blank" style="font-size:12px;color:var(--accent);text-decoration:none;font-family:var(--font-mono);letter-spacing:0.04em;">View ↗</a>
-                </div>
-            </div>
-
-            <div class="course-card">
-                <div class="course-provider">Notebook</div>
-                <div class="course-name">Chest X-Ray Images (Pneumonia) (AUC 0.9576)</div>
-                <div class="course-meta">Kaggle · recently published</div>
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;">
-                    <div class="course-badge done">Public</div>
-                    <a href="https://www.kaggle.com/code/virajsanghavi007/chest-x-ray-images-pneumonia-auc-0-9576" target="_blank" style="font-size:12px;color:var(--accent);text-decoration:none;font-family:var(--font-mono);letter-spacing:0.04em;">View ↗</a>
-                </div>
-            </div>
-
-
-            <div class="course-card">
-                <div class="course-provider">Notebook</div>
-                <div class="course-name">Mushroom Classification with NN (99.9% Acc)</div>
-                <div class="course-meta">Kaggle · 2026-08-27</div>
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;">
-                    <div class="course-badge done">Public</div>
-                    <a href="https://www.kaggle.com/code/virajsanghavi007/mushroom-classification-with-nn-99-9-acc" target="_blank" style="font-size:12px;color:var(--accent);text-decoration:none;font-family:var(--font-mono);letter-spacing:0.04em;">View ↗</a>
-                </div>
-            </div>
-
-            <div class="course-card">
-                <div class="course-provider">Notebook</div>
-                <div class="course-name">Student Performance using RF (MAE 3.0150)</div>
-                <div class="course-meta">Kaggle · 2026-08-28</div>
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;">
-                    <div class="course-badge done">Public</div>
-                    <a href="https://www.kaggle.com/code/virajsanghavi007/student-performance-using-rf-with-mae-3-0150" target="_blank" style="font-size:12px;color:var(--accent);text-decoration:none;font-family:var(--font-mono);letter-spacing:0.04em;">View ↗</a>
-                </div>
-            </div>
-
-            <div class="course-card">
-                <div class="course-provider">Notebook</div>
-                <div class="course-name">Human Activity Recognition (Accuracy 96.2%)</div>
-                <div class="course-meta">Kaggle · 2026-09-10</div>
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;">
-                    <div class="course-badge done">Public</div>
-                    <a href="https://www.kaggle.com/code/virajsanghavi007/human-activity-recognition-accuracy-96-2" target="_blank" style="font-size:12px;color:var(--accent);text-decoration:none;font-family:var(--font-mono);letter-spacing:0.04em;">View ↗</a>
-                </div>
-            </div>
-
+            <button class="kaggle-toggle" id="kaggleToggle" onclick="toggleKaggle()">Expand list ↕</button>
         </div>
     </div>
 </section>
+<script>
+function toggleKaggle() {
+    var list = document.getElementById('kaggleGrid');
+    var btn = document.getElementById('kaggleToggle');
+    list.classList.toggle('expanded');
+    btn.textContent = list.classList.contains('expanded') ? 'Collapse list ↕' : 'Expand list ↕';
+}
+function filterKaggle() {
+    var q = document.getElementById('kaggleSearch').value.trim().toLowerCase();
+    var rows = document.querySelectorAll('#kaggleGrid .kaggle-row');
+    var visible = 0;
+    rows.forEach(function(row) {
+        var match = row.dataset.name.indexOf(q) !== -1;
+        row.hidden = !match;
+        if (match) visible++;
+    });
+    document.getElementById('kaggleCount').textContent = visible + ' of ' + rows.length + ' notebooks';
+}
+document.addEventListener('DOMContentLoaded', filterKaggle);
+</script>
 
 
 <!-- ===================== COMPETITIVE PROGRAMMING ===================== -->
@@ -984,7 +1010,7 @@
             <!-- CODEFORCES -->
             <div class="activity-card">
                 <div class="activity-platform">Codeforces</div>
-                <div class="activity-stat-big" data-target="358">0</div>
+                <div class="activity-stat-big" id="cfRating" data-target="591">0</div>
                 <div class="activity-stat-sub">contest rating</div>
                 <div class="activity-breakdown">
                     <div class="activity-row">
@@ -993,7 +1019,11 @@
                     </div>
                     <div class="activity-row">
                         <span>Status</span>
-                        <span>Newbie</span>
+                        <span id="cfRank">Newbie</span>
+                    </div>
+                    <div class="activity-row">
+                        <span>Solved</span>
+                        <span id="cfSolved">39</span>
                     </div>
                 </div>
                 <a href="https://codeforces.com/profile/Black_Water_009" target="_blank" class="activity-link">View Profile ↗</a>
@@ -1015,23 +1045,41 @@
             <!-- LEETCODE -->
             <div class="activity-card">
                 <div class="activity-platform">LeetCode</div>
-                <div class="activity-stat-big" data-target="25">0</div>
+                <div class="activity-stat-big" id="lcTotal" data-target="25">0</div>
                 <div class="activity-stat-sub">problems solved</div>
                 <div class="activity-breakdown">
                     <div class="activity-row">
                         <span class="easy-color">Easy</span>
-                        <span>15 / 950</span>
+                        <span id="lcEasy">15 / 963</span>
                     </div>
                     <div class="activity-row">
                         <span class="med-color">Medium</span>
-                        <span>9 / 2069</span>
+                        <span id="lcMedium">9 / 2111</span>
                     </div>
                     <div class="activity-row">
                         <span class="hard-color">Hard</span>
-                        <span>1 / 943</span>
+                        <span id="lcHard">1 / 973</span>
                     </div>
                 </div>
                 <a href="https://leetcode.com/u/Viraj_Sanghavi/" target="_blank" class="activity-link">View Profile ↗</a>
+            </div>
+
+            <!-- PROJECT EULER -->
+            <div class="activity-card">
+                <div class="activity-platform">Project Euler</div>
+                <div class="activity-stat-big" id="peSolved" data-target="0">0</div>
+                <div class="activity-stat-sub">problems solved</div>
+                <div class="activity-breakdown">
+                    <div class="activity-row">
+                        <span>Handle</span>
+                        <span id="peHandle">-</span>
+                    </div>
+                    <div class="activity-row">
+                        <span>Note</span>
+                        <span style="font-size:12px;color:var(--text-muted);">manually updated - no public API</span>
+                    </div>
+                </div>
+                <a href="https://projecteuler.net/progress" target="_blank" class="activity-link">View Profile ↗</a>
             </div>
 
         </div>
@@ -1114,13 +1162,13 @@
                             <div class="contact-link-value">linkedin.com/in/virajsanghavi</div>
                         </div>
                     </a>
-                    <a href="https://kaggle.com/virajsanghavi" target="_blank" class="contact-link-item">
+                    <a href="https://www.kaggle.com/virajsanghavi007" target="_blank" class="contact-link-item">
                         <div class="contact-link-icon">
                             <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.334z"/></svg>
                         </div>
                         <div class="contact-link-text">
                             <div class="contact-link-label">KAGGLE</div>
-                            <div class="contact-link-value">kaggle.com/virajsanghavi</div>
+                            <div class="contact-link-value">kaggle.com/virajsanghavi007</div>
                         </div>
                     </a>
                 </div>
