@@ -1,5 +1,5 @@
 \documentclass[10pt,letterpaper]{article}
-\usepackage[top=0.55in,bottom=0.55in,left=0.6in,right=0.6in]{geometry}
+\usepackage[top=0.45in,bottom=0.45in,left=0.5in,right=0.5in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{charter}
 \usepackage{enumitem}
@@ -8,8 +8,8 @@
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \titleformat{\section}{\large\bfseries}{}{0pt}{}[\vspace{-6pt}\rule{\textwidth}{0.4pt}]
-\titlespacing*{\section}{0pt}{7pt}{4pt}
-\setlist[itemize]{leftmargin=1.2em,topsep=2pt,itemsep=1pt,parsep=0pt}
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+\setlist[itemize]{leftmargin=1.2em,topsep=2pt,itemsep=0pt,parsep=0pt}
 \newcommand{\entry}[4]{\textbf{#1}, #2 \hfill #3\\{\small\textit{#4}}}
 \newcommand{\proj}[2]{\textbf{#1} \hfill #2}
 
@@ -34,7 +34,7 @@ CGPA: 9.15 \hfill Mumbai, India
   \item Built a self-hosted Tally BI dashboard (Sales, Purchase, Receivables, Cash Flow, P\&L) with industry-standard KPIs (DSO, rate variance) over Tally ODBC
   \item Built an area-based lead engine merging MahaRERA, MCA, MPCB and Google Places into one SQLite store with cross-source dedupe, lead scoring, and human-approved outreach drafts
 \end{itemize}
-\vspace{3pt}
+\vspace{1pt}
 \entry{Developer Intern}{ITAakash Strategic Software Pvt.\ Ltd.}{June 2026 -- Aug 2026}{Mumbai, India}
 \begin{itemize}
   \item Built an AI cash-flow forecasting system using Amazon Chronos-2, replacing a legacy XGBoost pipeline, predicting daily net cash flow across thousands of grouped financial records
@@ -50,6 +50,12 @@ CGPA: 9.15 \hfill Mumbai, India
   \item Added FastAPI + PostgreSQL persistence with a documented schema-migration process, an audit trail, and a pytest suite covering pure decision logic
 \end{itemize}
 
+\proj{\href{https://github.com/VirajSanghavi007/TinyML}{\underline{TinyML}} -- CIFAR-10 on a Microcontroller Budget}{Oct 2026 -- present}
+\begin{itemize}
+  \item Compressed a ResNet-18 teacher (93.3\%) into an int8 model at 84.8\% test accuracy in 70.6 KB flash and 16 KB peak RAM (100 KB / 20 KB budget) via Once-for-All supernet training, evolutionary search, structured pruning, and KD + QAT
+  \item Benchmarked every stage against baselines (scratch CE/KD, pruning without fine-tune, PTQ vs QAT); checkpoint-resumable pipeline with unit, smoke and integration tests in GitHub Actions CI
+\end{itemize}
+
 \section{Research}
 \entry{Publicity \& Research Member}{DJS Anveshan, Research Club}{Jan 2024 -- present}{Dwarkadas J. Sanghvi College of Engineering}
 \begin{itemize}
@@ -59,6 +65,6 @@ CGPA: 9.15 \hfill Mumbai, India
 
 \section{Skills}
 \textbf{Languages / Infra:} Python, SQL, TypeScript, Bash, C++, Git, Docker, FastAPI, React, PostgreSQL, SQLite\\
-\textbf{ML / Data:} PyTorch, PyTorch Geometric, scikit-learn, XGBoost, LightGBM, NumPy, Pandas, Hugging Face\\
+\textbf{ML / Data:} PyTorch, PyTorch Geometric, NAS, Pruning, Quantization (QAT), scikit-learn, XGBoost, LightGBM, NumPy, Pandas, Hugging Face\\
 \textbf{Integrations:} Zoho Books API, TallyPrime (XML/ODBC), OAuth 2.0, Render
 \end{document}

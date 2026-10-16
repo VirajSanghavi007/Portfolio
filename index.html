@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viraj Sanghavi | AI/ML Engineer</title>
-    <meta name="description" content="Viraj Sanghavi - AI/ML engineer building adaptive speech pipelines, fraud detection systems, and Federated Learning research. Third-year CE student at DJ Sanghavi College of Engineering.">
+    <meta name="description" content="Viraj Sanghavi - AI/ML engineer building fraud detection, edge ML, and business automation systems, and Federated Learning research. Third-year CE student at DJ Sanghavi College of Engineering.">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Viraj Sanghavi | AI/ML Engineer">
-    <meta property="og:description" content="AI/ML engineer building adaptive speech pipelines, fraud detection systems, and Federated Learning research.">
+    <meta property="og:description" content="AI/ML engineer building fraud detection, edge ML, and business automation systems, and Federated Learning research.">
     <meta property="og:image" content="https://viraj-sanghavi.onrender.com/Images/profile.jpg">
     <meta property="og:url" content="https://viraj-sanghavi.onrender.com">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Viraj Sanghavi | AI/ML Engineer">
-    <meta name="twitter:description" content="AI/ML engineer building adaptive speech pipelines, fraud detection systems, and Federated Learning research.">
+    <meta name="twitter:description" content="AI/ML engineer building fraud detection, edge ML, and business automation systems, and Federated Learning research.">
     <meta name="twitter:image" content="https://viraj-sanghavi.onrender.com/Images/profile.jpg">
 
     <!-- Replace Images/Favicon.png with your actual favicon file -->
@@ -70,10 +70,10 @@
             <p class="hero-tagline"><span id="typed-text"></span><span class="cursor"></span></p>
             <p class="hero-bio">
                 I'm a third-year CE student at DJ Sanghavi, and I didn't wait for a degree to
-                do real work. I build adaptive speech pipelines, deploy fraud detectors, and
-                research why Federated Learning breaks under attack at DJS Anveshan. I compete
-                in hackathons, take Kaggle seriously, and automate workflows with n8n. When a
-                model fails in production, I want to know exactly why.
+                do real work. I've shipped ML and automation across two internships, built a graph
+                AML detector, squeezed a CIFAR-10 model into 70 KB for microcontrollers, and research
+                why Federated Learning breaks under attack at DJS Anveshan. When a model fails in
+                production, I want to know exactly why.
             </p>
             <div class="hero-actions">
                 <a href="#projects" class="btn-primary">View My Work</a>
@@ -101,12 +101,13 @@
                 <p>
                     I'm <strong>Viraj Sanghavi</strong>, a third-year Computer Engineering student at
                     DJ Sanghavi College of Engineering (graduating 2028), building systems
-                    across Speech AI, Federated Learning research, and workflow automation.
+                    across graph ML, edge ML, Federated Learning research, and business automation.
                 </p>
                 <p>
-                    My work spans <strong>adaptive speech recognition</strong> pipelines with closed-loop remediation,
-                    <strong>Federated Learning research</strong> investigating Byzantine-robust aggregation failures at DJS Anveshan,
-                    and <strong>production AI systems</strong> like cash-flow forecasting deployed during my internship.
+                    My work spans <strong>production AI and automation</strong> from two internships (cash-flow forecasting,
+                    invoice-to-purchase-order pipelines, Tally and Zoho Books integrations),
+                    <strong>TinyML</strong> compression for microcontrollers,
+                    and <strong>Federated Learning research</strong> investigating Byzantine-robust aggregation failures at DJS Anveshan.
                 </p>
                 <p>
                     I don't trust a result I haven't tried to break first. Most of what I build gets
@@ -119,10 +120,10 @@
             </div>
             <div class="about-right fade-in">
                 <div class="interest-card">
-                    <div class="interest-icon">🎙️</div>
+                    <div class="interest-icon">📟</div>
                     <div class="interest-content">
-                        <h4>Speech AI</h4>
-                        <p>Adaptive ASR, phoneme-level diagnostics, noise fingerprinting, and closed-loop LoRA fine-tuning.</p>
+                        <h4>Edge ML</h4>
+                        <p>Once-for-All search, structured pruning, distillation, and int8 QAT under hard flash and RAM budgets.</p>
                     </div>
                 </div>
                 <div class="interest-card">
@@ -135,8 +136,8 @@
                 <div class="interest-card">
                     <div class="interest-icon">⚙️</div>
                     <div class="interest-content">
-                        <h4>Workflow Automation</h4>
-                        <p>Building production-pattern pipelines with n8n - data validation, sub-workflow orchestration, and analytics.</p>
+                        <h4>Business Automation</h4>
+                        <p>LLM document extraction into Zoho Books, TallyPrime sync and BI, plus n8n pipelines with validation and orchestration.</p>
                     </div>
                 </div>
                 <div class="interest-card">
@@ -190,95 +191,61 @@
 
         <div class="projects-grid">
 
-            <!-- PROJECT 2: ADAPT-Synthetix -->
+            <!-- PROJECT: TinyML -->
             <div class="project-card fade-in">
-                <div class="project-visual" style="background:linear-gradient(135deg,#0a0e28,rgba(129,140,248,0.15))">
-                    <video class="project-demo" autoplay loop muted playsinline>
-                        <source src="Videos/adapt-synthetix-demo.mp4" type="video/mp4">
-                    </video>
-                    <span class="project-visual-icon">🎙️</span>
+                <div class="project-visual" style="background:linear-gradient(135deg,#0a1a12,rgba(52,211,153,0.15))">
+                    <span class="project-visual-icon">📟</span>
                 </div>
                 <div class="project-header">
                     <div>
-                        <span class="project-tag">Speech AI · ASR</span>
-                        <span class="course-badge wip" style="font-size:10px;padding:2px 10px;margin-bottom:6px;display:inline-block;">Ongoing</span>
-                        <h3 class="project-title">Hermes</h3>
-                        <p class="project-name-story">Messenger god - carries meaning across gods and mortals, translates one register into another. A speech system's entire job is that same translation: raw acoustic signal into meaning, and diagnosing exactly where the translation breaks.</p>
+                        <span class="project-tag">Edge ML · Model Compression</span>
+                        <h3 class="project-title">TinyML</h3>
                         <p class="project-desc">
-                            A research-grade adaptive speech pipeline that goes beyond transcription. It diagnoses
-                            WHY ASR fails at the phoneme level, fingerprints acoustic noise, detects model drift,
-                            and closes the loop with targeted LoRA fine-tuning,all in a single system.
+                            A CIFAR-10 classifier built for a microcontroller budget: at most 100 KB flash and 20 KB peak
+                            activation RAM, int8. A ResNet-18 teacher distills into a Once-for-All supernet, an evolutionary
+                            search picks the subnet that fits the budget, then structured pruning and quantization-aware
+                            training shrink it further. Every stage is compared against honest baselines.
                         </p>
                         <div class="project-stack">
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Wav2Vec2</span>
                             <span class="tech-tag">PyTorch</span>
-                            <span class="tech-tag">AdaLoRA</span>
-                            <span class="tech-tag">Bark TTS</span>
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Once-for-All NAS</span>
+                            <span class="tech-tag">Knowledge Distillation</span>
+                            <span class="tech-tag">QAT int8</span>
+                            <span class="tech-tag">TFLite Micro</span>
+                            <span class="tech-tag">GitHub Actions</span>
                         </div>
                     </div>
                     <div class="project-actions">
                         <div class="project-links">
-                            <a href="https://github.com/VirajSanghavi007/ADAPT-Synthetix" target="_blank" class="project-link" title="GitHub">
+                            <a href="https://github.com/VirajSanghavi007/TinyML" target="_blank" class="project-link" title="GitHub">
                                 <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                             </a>
-                            <a href="https://github.com/VirajSanghavi007/ADAPT-Synthetix" target="_blank" class="project-link" title="Live on Render">
-                                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
-                            </a>
                         </div>
-                        <button class="writeup-toggle" onclick="toggleWriteup(this)">
-                            read writeup <span class="writeup-arrow">▾</span>
-                        </button>
+                        <button class="writeup-toggle" onclick="toggleWriteup(this)">read writeup <span class="writeup-arrow">▾</span></button>
                     </div>
                 </div>
                 <div class="project-writeup">
                     <div class="writeup-content">
                         <h4>Problem</h4>
-                        <p>
-                            Standard ASR systems return a transcript and stop. They don't tell you which phonemes
-                            are causing errors, what the acoustic environment is doing to the signal, or how the
-                            model is drifting over time. ADAPT-Synthetix was designed to close all three gaps.
-                        </p>
-
-                        <h4>Architecture</h4>
-                        <p>
-                            Built on Facebook's Wav2Vec2 with a multi-layer diagnostic engine sitting on top.
-                            Every transcription runs through CTC confidence scoring, phoneme error rate computation,
-                            reference alignment, and noise fingerprinting before entering a confidence-weighted
-                            remediation priority queue.
-                        </p>
+                        <p>Microcontrollers have kilobytes, not gigabytes. A useful image classifier has to fit in about 100 KB of flash and 20 KB of working RAM, in int8, without falling apart in accuracy.</p>
+                        <h4>Pipeline</h4>
                         <ul>
-                            <li>8-feature acoustic noise fingerprinting: spectral centroid, bandwidth, rolloff, ZCR, RMS, MFCC variance, tempo, harmonic ratio. Classifies into clean / traffic / crowd / machinery / indoor.</li>
-                            <li>Phoneme-level drift monitoring using CUSUM and MMD. Triggers fine-tuning alert when 5+ phonemes enter high-risk state across a 20-utterance window.</li>
-                            <li>Domain vocabulary injection for medical and emergency terms,these errors are escalated in the priority queue regardless of overall CER.</li>
-                            <li>AdaLoRA (adaptive rank) fine-tuning with layer freezing and 10% experience replay. Implements HDMoLE LoRA-MoE routing across multiple expert adapters.</li>
-                            <li>Dual frontend: vanilla JS terminal UI (mic, waveform, file upload) and a React 18 dashboard with analytics, phoneme explorer, and model hub pages.</li>
+                            <li>Teacher: ResNet-18 in fp32 (93.3% test accuracy).</li>
+                            <li>Once-for-All supernet (MobileNetV2-style, elastic width, depth, kernel, expand) trained with the sandwich rule and distillation from the teacher.</li>
+                            <li>Evolutionary search under the flash and RAM budget, scored on validation accuracy after BN recalibration.</li>
+                            <li>Structured pruning of 30% of hidden and head channels, then a distillation fine-tune.</li>
+                            <li>Quantization-aware training last: int8 per-channel weights, per-tensor activations, BN folded.</li>
+                            <li>Every stage resumes from its checkpoint; unit, smoke and integration tests run in CI.</li>
                         </ul>
-
-                        <h4>Research Papers Implemented</h4>
-                        <p>
-                            Rumberg et al. Interspeech 2023 (CTC token uncertainty), Ernez et al. PMLR 2023
-                            (conformal prediction priority queue), Zhang et al. ICLR 2023 (AdaLoRA),
-                            Mu et al. ICASSP 2025 (HDMoLE), Guo et al. ICML 2017 (ECE calibration).
-                        </p>
-
                         <h4>Results</h4>
                         <div class="writeup-metrics">
-                            <div class="metric-box"><div class="val">8</div><div class="key">Noise Classes</div></div>
-                            <div class="metric-box"><div class="val">2620</div><div class="key">Benchmark Samples</div></div>
-                            <div class="metric-box"><div class="val">5+</div><div class="key">Papers Implemented</div></div>
+                            <div class="metric-box"><div class="val">84.8%</div><div class="key">int8 Test Acc</div></div>
+                            <div class="metric-box"><div class="val">70.6 KB</div><div class="key">Flash</div></div>
+                            <div class="metric-box"><div class="val">16 KB</div><div class="key">Peak RAM</div></div>
                         </div>
-
                         <h4>What I Learned</h4>
-                        <p>
-                            Phoneme-level granularity reveals failure modes that word-level CER completely masks.
-                            The drift detection was the hardest part: CUSUM is sensitive to window size in ways
-                            that are not obvious until you see it fail on real-world noisy audio.
-                        </p>
+                        <p>Distillation carried most of the weight: the pruned model fine-tuned with KD scored 85.0% against 83.1% with plain cross-entropy, and the final int8 model has about 170x fewer parameters than the teacher while losing about 8.5 points.</p>
                     </div>
                 </div>
             </div>
@@ -687,7 +654,21 @@
         </div>
         <div class="timeline">
 
-            <!-- Add your internship/work experience here -->
+            <div class="timeline-item fade-in">
+                <div class="timeline-item-header">
+                    <div class="timeline-role">Developer Intern</div>
+                    <div class="timeline-period">Sep 2026 – present</div>
+                </div>
+                <div class="timeline-org">Aelius Turbina LLP, solar BIPV manufacturer and EPC</div>
+                <ul class="timeline-points">
+                    <li>Built a FastAPI pipeline that turns vendor Proforma Invoices (PDFs, scans, chat screenshots) into Zoho Books Purchase Orders via LLM/OCR extraction, GSTIN-verified vendor resolution, item matching, and a submitter + admin review loop</li>
+                    <li>Built a TallyPrime to Zoho Books sync over Tally's XML gateway with a cached OAuth layer, rate limiting, and GST-aware handling across two state registrations</li>
+                    <li>Built a self-hosted Tally BI dashboard (Sales, Purchase, Receivables, Cash Flow, P&amp;L) with industry-standard KPIs such as DSO and rate variance</li>
+                    <li>Built an area-based lead engine merging MahaRERA, MCA, MPCB and Google Places into one SQLite store with cross-source dedupe, scoring, and human-approved outreach drafts</li>
+                    <li>Prototyping a photo-to-CAD pipeline (COLMAP, Open3D plane fitting, CadQuery STEP export) as the base for an AR rooftop solar design tool</li>
+                </ul>
+            </div>
+
             <div class="timeline-item fade-in">
                 <div class="timeline-item-header">
                     <div class="timeline-role">Developer Intern</div>
