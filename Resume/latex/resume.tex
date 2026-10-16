@@ -1,0 +1,64 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[top=0.55in,bottom=0.55in,left=0.6in,right=0.6in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\vspace{-6pt}\rule{\textwidth}{0.4pt}]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+\setlist[itemize]{leftmargin=1.2em,topsep=2pt,itemsep=1pt,parsep=0pt}
+\newcommand{\entry}[4]{\textbf{#1}, #2 \hfill #3\\{\small\textit{#4}}}
+\newcommand{\proj}[2]{\textbf{#1} \hfill #2}
+
+\begin{document}
+\begin{center}
+{\LARGE\bfseries Viraj Sanghavi}\\[4pt]
+\small Mumbai, India \,|\, \href{mailto:virajsanghavi000@gmail.com}{virajsanghavi000@gmail.com} \,|\, +91-8104488190\\
+\href{https://linkedin.com/in/virajsanghavi}{linkedin.com/in/virajsanghavi} \,|\,
+\href{https://github.com/VirajSanghavi007}{github.com/VirajSanghavi007} \,|\,
+\href{https://kaggle.com/virajsanghavi}{kaggle.com/virajsanghavi}
+\end{center}
+
+\section{Education}
+\textbf{Dwarkadas J. Sanghvi College of Engineering}, B.Tech in Computer Engineering \hfill Sept 2024 -- present\\
+CGPA: 9.15 \hfill Mumbai, India
+
+\section{Experience}
+\entry{Developer Intern}{Aelius Turbina LLP}{Sept 2026 -- present}{Solar BIPV manufacturer and EPC, Mumbai, India}
+\begin{itemize}
+  \item Built a FastAPI pipeline that turns vendor Proforma Invoices (PDFs, scans, chat screenshots) into Zoho Books Purchase Orders via LLM/OCR extraction, GSTIN-verified vendor resolution, item matching, and a submitter + admin review loop
+  \item Built a TallyPrime to Zoho Books sync over Tally's XML gateway with a cached OAuth layer, rate limiting, and GST-aware handling across two state registrations
+  \item Built a self-hosted Tally BI dashboard (Sales, Purchase, Receivables, Cash Flow, P\&L) with industry-standard KPIs (DSO, rate variance) over Tally ODBC
+  \item Built an area-based lead engine merging MahaRERA, MCA, MPCB and Google Places into one SQLite store with cross-source dedupe, lead scoring, and human-approved outreach drafts
+\end{itemize}
+\vspace{3pt}
+\entry{Developer Intern}{ITAakash Strategic Software Pvt.\ Ltd.}{June 2026 -- Aug 2026}{Mumbai, India}
+\begin{itemize}
+  \item Built an AI cash-flow forecasting system using Amazon Chronos-2, replacing a legacy XGBoost pipeline, predicting daily net cash flow across thousands of grouped financial records
+  \item Designed a Flask API serving 365-day forecasts per (project, ledger, company) group, integrated into the existing Java EE ERP via PostgreSQL
+  \item Implemented walk-forward backtesting (5 rolling origins, 4-month horizon) with bias correction for right-skewed construction cash flow data
+\end{itemize}
+
+\section{Projects}
+\proj{\href{https://github.com/VirajSanghavi007/Vigilia}{\underline{Vigilia}} -- Graph-Native AML Detection}{Jan 2025 -- present}
+\begin{itemize}
+  \item Started as Argus at iDEA 2.0 (Union Bank of India PS3, Team Zeta, Top 40+ finalist); continued past the hackathon under the name Vigilia
+  \item Built graph-native AML system detecting 8 structural typologies plus 7 behavioural signals (structuring, smurfing, layering) on 500K+ IBM synthetic transactions, rebuilt since on a Multi-GNN (PNAConv + GINEConv) classifying transactions directly on the multigraph
+  \item Added FastAPI + PostgreSQL persistence with a documented schema-migration process, an audit trail, and a pytest suite covering pure decision logic
+\end{itemize}
+
+\section{Research}
+\entry{Publicity \& Research Member}{DJS Anveshan, Research Club}{Jan 2024 -- present}{Dwarkadas J. Sanghvi College of Engineering}
+\begin{itemize}
+  \item Authored a problem discovery report on a critical Federated Learning failure mode: robust aggregation filters (Krum, FLAME) silently discarding valid non-IID updates from minority institutions in cross-institutional fraud detection
+  \item Identified an unaddressed gap in FL security literature as of 2025, citing IEEE Transactions on Big Data and JPMorgan's Project Aikya
+\end{itemize}
+
+\section{Skills}
+\textbf{Languages / Infra:} Python, SQL, TypeScript, Bash, C++, Git, Docker, FastAPI, React, PostgreSQL, SQLite\\
+\textbf{ML / Data:} PyTorch, PyTorch Geometric, scikit-learn, XGBoost, LightGBM, NumPy, Pandas, Hugging Face\\
+\textbf{Integrations:} Zoho Books API, TallyPrime (XML/ODBC), OAuth 2.0, Render
+\end{document}
