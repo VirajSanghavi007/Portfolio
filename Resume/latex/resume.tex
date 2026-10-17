@@ -46,8 +46,8 @@ CGPA: 9.15 \hfill Mumbai, India
 \proj{\href{https://github.com/VirajSanghavi007/Vigilia}{\underline{Vigilia}} -- Graph-Native AML Detection}{Jan 2025 -- present}
 \begin{itemize}
   \item Started as Argus at iDEA 2.0 (Union Bank of India PS3, Team Zeta, Top 40+ finalist); continued past the hackathon under the name Vigilia
-  \item Built graph-native AML system detecting 8 structural typologies plus 7 behavioural signals (structuring, smurfing, layering) on 500K+ IBM synthetic transactions, rebuilt since on a Multi-GNN (PNAConv + GINEConv) classifying transactions directly on the multigraph
-  \item Added FastAPI + PostgreSQL persistence with a documented schema-migration process, an audit trail, and a pytest suite covering pure decision logic
+  \item Hackathon build detected 8 structural AML typologies plus 7 behavioural signals on 500K+ IBM synthetic transactions; now rebuilding it as a layered, production-target system with a GNN detection layer
+  \item Built a Memgraph graph store with a Neo4j cold archive; cut Elliptic bulk load (204K nodes, 234K edges) from 17 min to 1.6 s via sharded LOAD CSV, benchmarked ingestion to 15M nodes, and fixed a MERGE index bottleneck causing throughput decay
 \end{itemize}
 
 \proj{\href{https://github.com/VirajSanghavi007/TinyML}{\underline{TinyML}} -- CIFAR-10 on a Microcontroller Budget}{Oct 2026 -- present}
