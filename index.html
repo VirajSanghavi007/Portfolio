@@ -165,20 +165,24 @@ body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--bg);use
   .search,.tb.label span,.tray .pill.hide{display:none}
   #ev{left:16px;right:16px;width:auto;margin:0}
   #startMenu{left:8px;right:8px;width:auto}
-  #boot{font-size:11px;padding:12px}
 }
 
 /* arch boot screen */
-#boot{position:fixed;inset:0;z-index:20000;background:#000;color:#d0d0d0;font:13px/1.55 'Fira Code',monospace;padding:18px 22px;overflow:hidden;cursor:pointer}
+#boot{position:fixed;inset:0;z-index:20000;background:#000;color:#d0d0d0;font:13px/1.55 'Fira Code',monospace;padding:18px 22px 48px;overflow:hidden;cursor:pointer}
 #boot .ok{color:#3ddc84;font-weight:700}
 #boot .fail{color:#ff4d6d;font-weight:700}
 #boot .wait{color:#fbbf24;font-weight:700}
 #boot .dim{color:#7a7a7a}
+#boot .spin{white-space:pre;color:#ff4d6d}
 #boot .hl{color:#1793d1;font-weight:700}
 #boot .skip{position:fixed;right:18px;bottom:14px;color:#555;font-size:12px}
 #boot .classic{position:fixed;left:22px;bottom:14px;color:#1793d1;font-size:12px;text-decoration:none}
 #boot .classic:hover{text-decoration:underline}
 #boot.out{transition:opacity .6s;opacity:0;pointer-events:none}
+@media (max-width:760px){
+  #boot{font-size:11px;padding:12px 12px 64px}
+  #boot .skip{right:auto;left:22px;bottom:34px}
+}
 .caret{display:inline-block;width:8px;height:15px;background:#d0d0d0;vertical-align:-2px;animation:blink 1s steps(1) infinite}
 @keyframes blink{50%{opacity:0}}
 </style>
@@ -458,20 +462,36 @@ function runScan(){
 }
 
 /* arch boot screen, once per tab session; ?boot forces it */
+// ['stall', label, ms, done] spins like a systemd start job, ['pause', ms] just hangs
 const BOOT=[
   ['dim',':: running early hook [udev]'],
+  ['dim','Starting systemd-udevd version 257.9-1-arch'],
+  ['dim',':: running hook [udev]'],
+  ['dim',':: Triggering uevents...'],
+  ['pause',900],
   ['dim',':: running hook [keymap]'],
+  ['dim',':: performing fsck on \'/dev/nvme0n1p2\''],
   ['dim','/dev/nvme0n1p2: clean, rebuilt more times than I can count'],
+  ['dim',':: mounting \'/dev/nvme0n1p2\' on real root'],
+  ['pause',700],
   ['','Welcome to <span class="hl">Arch Linux</span>!'],
+  ['ok','Created slice Slice /system/getty.'],
+  ['ok','Started Journal Service.'],
+  ['ok','Started Rule-based Manager for Device Events and Files.'],
+  ['stall','/dev/disk/by-uuid/4f2c-9a1e',1700,'Found device /dev/disk/by-uuid/4f2c-9a1e.'],
   ['ok','Mounted /home/viraj/projects.'],
+  ['ok','Started NetworkManager.service.'],
+  ['stall','Wait for Network to be Configured',2300,'Finished Wait for Network to be Configured.'],
   ['ok','Started memgraph.service (Vigilia live graph).'],
   ['ok','Reached target tinyml.target (70.6 KB, fits in flash).'],
   ['ok','Started autokaggle.timer (daily notebooks).'],
   ['ok','Started tally-zoho-sync.service (resumes from last record).'],
+  ['stall','nvidia-persistenced.service',1300,'Started nvidia-persistenced.service.'],
   ['ok','Started leakage-watchdog.service.'],
   ['fail','Failed to start codeforces.service. <span class="dim">Unit is masked on purpose.</span>'],
   ['wait','A start job is running for exam-prep.service (will start at 12)'],
   ['ok','Started dsa-grind.service.'],
+  ['ok','Reached target multi-user.target.'],
   ['ok','Reached target graphical.target.'],
 ];
 let booted=false;
@@ -480,16 +500,38 @@ function bootLine([k,t]){
   return `<div class="${k==='dim'?'dim':''}">${tag}${t}</div>`;
 }
 function typeInto(el,s,done,speed){let j=0;(function t(){if(booted)return;el.textContent=s.slice(0,++j);j<s.length?setTimeout(t,speed):setTimeout(done,250)})()}
+const SPIN=['*     ','**    ','***   ',' ***  ','  *** ','   ***','    **','     *'];
+const SPIN_SEQ=[...SPIN,...SPIN.slice(1,-1).reverse()];
+function stallLine(out,label,ms,done,cb){
+  const d=document.createElement('div'); out.appendChild(d);
+  const t0=performance.now(); let f=0;
+  (function tick(){
+    if(booted)return;
+    const el=performance.now()-t0;
+    if(el>=ms){d.outerHTML=bootLine(['ok',done]);cb();return}
+    d.innerHTML=`[<span class="wait spin">${SPIN_SEQ[f++%SPIN_SEQ.length]}</span>] A start job is running for ${label} (${Math.floor(el/1000)}s / 1min 30s)`;
+    setTimeout(tick,110);
+  })();
+}
 function runBoot(){
-  const out=$('#bootOut'); let i=0;
+  const out=$('#bootOut'),box=$('#boot'); let i=0;
+  // keep the newest line in view once the log outgrows the screen
+  const follow=()=>{box.scrollTop=box.scrollHeight};
   (function next(){
     if(booted)return;
-    if(i<BOOT.length){out.insertAdjacentHTML('beforeend',bootLine(BOOT[i++]));setTimeout(next,i<4?260:170+Math.random()*160);return}
+    follow();
+    if(i<BOOT.length){
+      const l=BOOT[i++];
+      if(l[0]==='pause'){setTimeout(next,l[1]);return}
+      if(l[0]==='stall'){stallLine(out,l[1],l[2],l[3],()=>setTimeout(next,200));return}
+      out.insertAdjacentHTML('beforeend',bootLine(l));setTimeout(next,i<4?260:140+Math.random()*140);return
+    }
     out.insertAdjacentHTML('beforeend','<br><div>Arch Linux 6.17.2-arch1-1 (tty1)</div><br><div>viraj-omen login: <span id="lg"></span><span class="caret"></span></div>');
+    follow();
     typeInto($('#lg'),'viraj',()=>{
-      out.insertAdjacentHTML('beforeend','<div>Password: <span id="pw"></span></div>');
+      out.insertAdjacentHTML('beforeend','<div>Password: <span id="pw"></span></div>');follow();
       typeInto($('#pw'),'••••••••',()=>{
-        out.insertAdjacentHTML('beforeend','<br><div class="dim">exec virajos-session</div>');
+        out.insertAdjacentHTML('beforeend','<br><div class="dim">exec virajos-session</div>');follow();
         setTimeout(finishBoot,600);
       },60);
     },110);
