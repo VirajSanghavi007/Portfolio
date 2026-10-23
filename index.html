@@ -68,7 +68,7 @@ body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--bg);use
 .ex{display:grid;grid-template-columns:180px 1fr;height:100%}
 .ex nav{border-right:1px solid var(--border);padding:10px 8px;font-size:13px}
 .ex nav h6{font-size:10px;letter-spacing:.12em;color:var(--muted);margin:12px 8px 6px;font-weight:600}
-.ex nav a{display:flex;gap:8px;padding:6px 8px;border-radius:6px;color:var(--text);cursor:pointer}
+.ex nav a{display:flex;gap:8px;padding:6px 8px;border-radius:6px;color:var(--text);cursor:pointer;text-decoration:none}
 .ex nav a:hover{background:rgba(255,255,255,.06)}
 .ex nav a.on{background:rgba(196,34,94,.2)}
 .ex main{padding:14px 18px;overflow:auto}
@@ -331,7 +331,7 @@ function explorer(win, section, sel){
   }
   win.querySelector('.body').innerHTML = `<div class="ex"><nav><h6>THIS PC</h6>
     ${nav.map(([k,g,n])=>`<a data-sec="${k}" class="${k===section?'on':''}">${g} ${n}</a>`).join('')}
-    <h6>CLOUD</h6><a onclick="window.open('https://github.com/VirajSanghavi007')">🐙 GitHub</a><a onclick="window.open('https://www.kaggle.com')">📈 Kaggle</a></nav>
+    <h6>CLOUD</h6><a href="https://github.com/VirajSanghavi007" target="_blank" rel="noopener">🐙 GitHub</a><a href="https://www.kaggle.com/virajsanghavi007" target="_blank" rel="noopener">📈 Kaggle</a></nav>
     <main><div class="crumb"><div class="path mono">${path}</div><input placeholder="Search ${section}" data-q></div>${main}</main></div>`;
   win.querySelectorAll('[data-sec]').forEach(a=>a.onclick=()=>explorer(win,a.dataset.sec));
   win.querySelectorAll('.tile').forEach(t=>t.onclick=()=>explorer(win,section,+t.dataset.i));
