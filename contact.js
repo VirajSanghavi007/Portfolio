@@ -10,7 +10,7 @@
 //     Copy the Template ID (looks like "template_xxxxxxx") → paste into EMAILJS_TEMPLATE_ID
 //  4. Account (top right) → Public Key → copy → paste into EMAILJS_PUBLIC_KEY
 //
-//  Then save and open index.html - the form will deliver to your Gmail.
+//  Then save and open classic.html - the form will deliver to your Gmail.
 // =====================================================
 
 const EMAILJS_PUBLIC_KEY  = '0z-U4F7B8BJEgmCHn';     // from Account → Public Key
@@ -19,7 +19,7 @@ const EMAILJS_TEMPLATE_ID = 'template_mz5e59w';      // from Email Templates
 
 (function init() {
     if (typeof emailjs === 'undefined') {
-        console.error('EmailJS SDK not loaded. Check the <script> tag in index.html.');
+        console.error('EmailJS SDK not loaded. Check the <script> tag in classic.html.');
         return;
     }
     emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });

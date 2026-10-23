@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viraj Sanghavi | AI/ML Engineer</title>
+    <meta name="description" content="Viraj Sanghavi - AI/ML engineer building fraud detection, edge ML, and business automation systems, and Federated Learning research. Third-year CE student at DJ Sanghavi College of Engineering.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Viraj Sanghavi | AI/ML Engineer">
+    <meta property="og:description" content="AI/ML engineer building fraud detection, edge ML, and business automation systems, and Federated Learning research.">
+    <meta property="og:image" content="https://viraj-sanghavi.onrender.com/Images/og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Viraj Sanghavi: Graph ML, Edge ML, Federated Learning, Automation">
+    <meta property="og:url" content="https://viraj-sanghavi.onrender.com">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Viraj Sanghavi | AI/ML Engineer">
+    <meta name="twitter:description" content="AI/ML engineer building fraud detection, edge ML, and business automation systems, and Federated Learning research.">
+    <meta name="twitter:image" content="https://viraj-sanghavi.onrender.com/Images/og-card.png">
+
+    <!-- Replace Images/Favicon.png with your actual favicon file -->
+    <link rel="icon" type="image/png" href="Images/Favicon.png">
+    <link rel="shortcut icon" href="Images/Favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="nav" id="navbar">
+    <div class="container nav-inner">
+        <div class="nav-logo">
+            <!-- Drop your logo image into the Portofolio folder and update the src below -->
+            <img src="Images/Favicon.png" alt="Viraj Sanghavi" style="height:38px;width:38px;object-fit:contain;">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">about</a></li>
+            <li><a href="#projects">projects</a></li>
+            <li><a href="#hackathons">hackathons</a></li>
+            <li><a href="#research">research</a></li>
+            <li><a href="#skills">skills</a></li>
+            <li><a href="#experience">experience</a></li>
+            <li><a href="#courses">courses</a></li>
+            <li><a href="#kaggle">kaggle</a></li>
+            <li><a href="#freelance">freelance</a></li>
+            <li><a href="#contact" class="nav-cta">contact</a></li>
+            <li><a href="/">virajOS</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <svg class="icon-moon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/></svg>
+            <svg class="icon-sun" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+</nav>
+<div class="menu-overlay" id="menuOverlay"></div>
+
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="home">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-dots"></div>
+
+    <div class="container hero-content">
+        <div class="hero-left">
+            <h1 class="hero-name">Viraj Sanghavi</h1>
+            <p class="hero-tagline"><span id="typed-text"></span><span class="cursor"></span></p>
+            <p class="hero-bio">
+                I'm a third-year CE student at DJ Sanghavi, and I didn't wait for a degree to
+                do real work. I've shipped ML and automation across two internships, built a graph
+                AML detector, squeezed a CIFAR-10 model into 70 KB for microcontrollers, and research
+                why Federated Learning breaks under attack at DJS Anveshan. When a model fails in
+                production, I want to know exactly why.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn-primary">View My Work</a>
+                <a href="#contact"  class="btn-ghost">Get In Touch</a>
+                <a href="Resume/resume.pdf" target="_blank" class="btn-ghost">View Resume</a>
+            </div>
+        </div>
+        <div class="hero-photo">
+            <img src="Images/profile.jpg" alt="Viraj Sanghavi" onerror="this.parentElement.classList.add('no-photo')">
+        </div>
+    </div>
+
+</section>
+
+
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about">
+    <div class="container">
+        <div class="fade-in">
+            <h2 class="section-title">Who I am</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-text fade-in">
+                <p>
+                    I'm <strong>Viraj Sanghavi</strong>, a third-year Computer Engineering student at
+                    DJ Sanghavi College of Engineering (graduating 2028), building systems
+                    across graph ML, edge ML, Federated Learning research, and business automation.
+                </p>
+                <p>
+                    My work spans <strong>production AI and automation</strong> from two internships (cash-flow forecasting,
+                    invoice-to-purchase-order pipelines, Tally and Zoho Books integrations),
+                    <strong>TinyML</strong> compression for microcontrollers,
+                    and <strong>Federated Learning research</strong> investigating Byzantine-robust aggregation failures at DJS Anveshan.
+                </p>
+                <p>
+                    I don't trust a result I haven't tried to break first. Most of what I build gets
+                    re-evaluated harder than a demo needs: walk-forward backtests instead of a single
+                    split, phoneme-level error diagnosis instead of trusting a CER number, drift
+                    monitoring instead of assuming a model stays good. I'd rather ship something slower
+                    that holds up than something fast that only looks finished. No shortcuts on data
+                    leakage, no skipping evaluation.
+                </p>
+            </div>
+            <div class="about-right fade-in">
+                <div class="interest-card">
+                    <div class="interest-icon">📟</div>
+                    <div class="interest-content">
+                        <h4>Edge ML</h4>
+                        <p>Once-for-All search, structured pruning, distillation, and int8 QAT under hard flash and RAM budgets.</p>
+                    </div>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">🔬</div>
+                    <div class="interest-content">
+                        <h4>Federated Learning</h4>
+                        <p>Researching failure modes in Byzantine-robust aggregation under non-IID data at DJS Anveshan.</p>
+                    </div>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">⚙️</div>
+                    <div class="interest-content">
+                        <h4>Business Automation</h4>
+                        <p>LLM document extraction into Zoho Books, TallyPrime sync and BI, plus n8n pipelines with validation and orchestration.</p>
+                    </div>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">💰</div>
+                    <div class="interest-content">
+                        <h4>Time-Series Forecasting</h4>
+                        <p>Cash-flow prediction with Chronos-2, walk-forward backtesting, and bias correction for skewed data.</p>
+                    </div>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">🧱</div>
+                    <div class="interest-content">
+                        <h4>System Design</h4>
+                        <p>Actively studying distributed systems fundamentals - scalability, consistency, and architecture trade-offs - as my next priority after DSA.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="strengths fade-in">
+            <div class="strength-card">
+                <h4>Validation over demos</h4>
+                <p>Walk-forward backtests, phoneme-level error diagnosis, explicit drift
+                   monitoring. I re-check my own results harder than a demo needs.</p>
+            </div>
+            <div class="strength-card">
+                <h4>Ships to production</h4>
+                <p>Cash-flow forecasting deployed during my internship. I build pipelines to
+                   run under real load, not to survive a five-minute presentation.</p>
+            </div>
+            <div class="strength-card">
+                <h4>Learns closed-book</h4>
+                <p>When I use AI to move fast, I rebuild the parts I didn't understand from
+                   scratch before I count it as a skill I actually have.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== PROJECTS ===================== -->
+<section id="projects" style="background:var(--bg-surface)">
+    <div class="container">
+        <div class="fade-in">
+            <h2 class="section-title">Projects</h2>
+            <p class="section-subtitle">
+                Each project covers the full stack: data collection, feature engineering,
+                model training, evaluation, and deployment.
+            </p>
+        </div>
+
+        <div class="projects-grid">
+
+            <!-- PROJECT: TinyML -->
+            <div class="project-card fade-in">
+                <div class="project-visual" style="background:linear-gradient(135deg,#0a1a12,rgba(52,211,153,0.15))">
+                    <span class="project-visual-icon">📟</span>
+                </div>
+                <div class="project-header">
+                    <div>
+                        <span class="project-tag">Edge ML · Model Compression</span>
+                        <h3 class="project-title">TinyML</h3>
+                        <p class="project-desc">
+                            A CIFAR-10 classifier built for a microcontroller budget: at most 100 KB flash and 20 KB peak
+                            activation RAM, int8. A ResNet-18 teacher distills into a Once-for-All supernet, an evolutionary
+                            search picks the subnet that fits the budget, then structured pruning and quantization-aware
+                            training shrink it further. Every stage is compared against honest baselines.
+                        </p>
+                        <div class="project-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Once-for-All NAS</span>
+                            <span class="tech-tag">Knowledge Distillation</span>
+                            <span class="tech-tag">QAT int8</span>
+                            <span class="tech-tag">TFLite Micro</span>
+                            <span class="tech-tag">GitHub Actions</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <div class="project-links">
+                            <a href="https://github.com/VirajSanghavi007/TinyML" target="_blank" class="project-link" title="GitHub">
+                                <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
+                        </div>
+                        <button class="writeup-toggle" onclick="toggleWriteup(this)">read writeup <span class="writeup-arrow">▾</span></button>
+                    </div>
+                </div>
+                <div class="project-writeup">
+                    <div class="writeup-content">
+                        <h4>Problem</h4>
+                        <p>Microcontrollers have kilobytes, not gigabytes. A useful image classifier has to fit in about 100 KB of flash and 20 KB of working RAM, in int8, without falling apart in accuracy.</p>
+                        <h4>Pipeline</h4>
+                        <ul>
+                            <li>Teacher: ResNet-18 in fp32 (93.3% test accuracy).</li>
+                            <li>Once-for-All supernet (MobileNetV2-style, elastic width, depth, kernel, expand) trained with the sandwich rule and distillation from the teacher.</li>
+                            <li>Evolutionary search under the flash and RAM budget, scored on validation accuracy after BN recalibration.</li>
+                            <li>Structured pruning of 30% of hidden and head channels, then a distillation fine-tune.</li>
+                            <li>Quantization-aware training last: int8 per-channel weights, per-tensor activations, BN folded.</li>
+                            <li>Every stage resumes from its checkpoint; unit, smoke and integration tests run in CI.</li>
+                        </ul>
+                        <h4>Results</h4>
+                        <div class="writeup-metrics">
+                            <div class="metric-box"><div class="val">84.8%</div><div class="key">int8 Test Acc</div></div>
+                            <div class="metric-box"><div class="val">70.6 KB</div><div class="key">Flash</div></div>
+                            <div class="metric-box"><div class="val">16 KB</div><div class="key">Peak RAM</div></div>
+                        </div>
+                        <h4>What I Learned</h4>
+                        <p>Distillation carried most of the weight: the pruned model fine-tuned with KD scored 85.0% against 83.1% with plain cross-entropy, and the final int8 model has about 170x fewer parameters than the teacher while losing about 8.5 points.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 4: Vigilia -->
+            <div class="project-card fade-in">
+                <div class="project-visual" style="background:linear-gradient(135deg,#1a0a0a,rgba(196,34,94,0.15))">
+                    <video class="project-demo" autoplay loop muted playsinline>
+                        <source src="Videos/aml-demo.mp4" type="video/mp4">
+                    </video>
+                    <span class="project-visual-icon">🔍</span>
+                </div>
+                <div class="project-header">
+                    <div>
+                        <span class="project-tag">Finance · Fraud Detection</span>
+                        <span class="course-badge wip" style="font-size:10px;padding:2px 10px;margin-bottom:6px;display:inline-block;">Rebuilding</span>
+                        <h3 class="project-title">Vigilia</h3>
+                        <p class="project-name-story">Latin for a night watch - Roman legions rotated troops through the <em>vigiliae</em>, fixed shifts through the night when most attacks came. Started life as Argus during the hackathon (hundred-eyed watcher of Greek myth); renamed once it stopped being a 48-hour build and became something meant to actually keep watch.</p>
+                        <p class="project-desc">
+                            Graph-native Anti-Money Laundering detection, rebuilt from scratch after the hackathon as a layered,
+                            production-target system. The current rebuild focuses on the graph store: Memgraph for live transaction
+                            graphs with a Neo4j cold archive, streaming and bulk ingestion benchmarked up to 15M nodes, and a
+                            container pipeline scanned with Trivy in CI. The GNN detection layer is being rebuilt on top of it.
+                        </p>
+                        <div class="project-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Memgraph</span>
+                            <span class="tech-tag">Neo4j</span>
+                            <span class="tech-tag">PyTorch Geometric</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">GitHub Actions</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <div class="project-links">
+                            <a href="https://github.com/VirajSanghavi007/Vigilia" target="_blank" class="project-link" title="GitHub">
+                                <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
+                        </div>
+                        <button class="writeup-toggle" onclick="toggleWriteup(this)">read writeup <span class="writeup-arrow">▾</span></button>
+                    </div>
+                </div>
+                <div class="project-writeup">
+                    <div class="writeup-content">
+                        <h4>Problem</h4>
+                        <p>Union Bank's fraud investigators manually reconstruct transaction trails, taking 3 to 5 days per case. Coordinated laundering schemes (circular routing, layering, smurfing) escape detection before funds exit.</p>
+                        <h4>Since the Hackathon</h4>
+                        <p>The 48-hour build, then called Argus, was a Random Forest on graph features (F1 0.67), enough to place Top 40+ at iDEA 2.0 but not enough to trust in production. A first follow-up added Postgres and a Multi-GNN, but the code grew tangled, so I wiped it and restarted from a layered architecture, rebuilding each layer deliberately instead of patching the old one.</p>
+                        <h4>Rebuild so far</h4>
+                        <ul>
+                            <li>Graph store on Memgraph, with a Memgraph-to-Neo4j hot/cold archive for older transactions</li>
+                            <li>Bulk load of the Elliptic dataset (204K nodes, 234K edges) cut from 17 minutes to 1.6 seconds by switching from concurrent UNWIND to sharded LOAD CSV</li>
+                            <li>Found and fixed a missing-index MERGE bottleneck that made streaming-ingestion throughput decay over time</li>
+                            <li>Model registry, Docker image scanned with Trivy, CI on GitHub Actions</li>
+                        </ul>
+                        <h4>Results</h4>
+                        <div class="writeup-metrics">
+                            <div class="metric-box"><div class="val">1.6s</div><div class="key">Elliptic Bulk Load</div></div>
+                            <div class="metric-box"><div class="val">1.17M</div><div class="key">Node Rows/s</div></div>
+                            <div class="metric-box"><div class="val">15M</div><div class="key">Nodes Benchmarked</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT: AutoKaggle -->
+            <div class="project-card fade-in">
+                <div class="project-visual" style="background:linear-gradient(135deg,#0a1420,rgba(28,143,160,0.12))">
+                    <span class="project-visual-icon">🤖</span>
+                </div>
+                <div class="project-header">
+                    <div>
+                        <span class="project-tag">AutoML · Automation</span>
+                        <h3 class="project-title">AutoKaggle</h3>
+                        <p class="project-desc">
+                            An unattended daily job that picks Kaggle datasets, runs EDA, lets a scheduled Claude routine choose a
+                            modeling pipeline, benchmarks candidate models with Optuna, then generates, runs and publishes a Jupyter
+                            notebook to GitHub and Kaggle. The notebooks in the Kaggle section below come from it.
+                        </p>
+                        <div class="project-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Optuna</span>
+                            <span class="tech-tag">scikit-learn</span>
+                            <span class="tech-tag">CatBoost</span>
+                            <span class="tech-tag">Kaggle API</span>
+                            <span class="tech-tag">Claude</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <div class="project-links">
+                            <a href="https://github.com/VirajSanghavi007/AutoKaggle" target="_blank" class="project-link" title="GitHub">
+                                <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ===================== HACKATHONS ===================== -->
+<section id="hackathons" style="background:var(--bg-surface)">
+    <div class="container">
+        <div class="fade-in">
+            <h2 class="section-title">Hackathons</h2>
+            <p class="section-subtitle">Where a couple of these projects actually started.</p>
+        </div>
+        <div class="projects-grid">
+
+            <!-- Argus @ iDEA 2.0 -->
+            <div class="project-card fade-in">
+                <div class="project-visual" style="background:linear-gradient(135deg,#1a0a0a,rgba(196,34,94,0.15))">
+                    <video class="project-demo" autoplay loop muted playsinline>
+                        <source src="Videos/aml-demo.mp4" type="video/mp4">
+                    </video>
+                    <span class="project-visual-icon">🔍</span>
+                </div>
+                <div class="project-header">
+                    <div>
+                        <span class="project-tag">Finance · Fraud Detection</span>
+                        <span style="font-family:var(--font-mono);font-size:10px;color:var(--cyan);background:var(--cyan-dim);border:1px solid rgba(28,143,160,0.2);padding:2px 10px;border-radius:20px;margin-left:8px;">iDEA 2.0 · Top 40+ Finalist</span>
+                        <h3 class="project-title">Argus</h3>
+                        <p class="project-name-story">Argus Panoptes - the hundred-eyed giant of Greek myth, set to watch ceaselessly; even asleep, some eyes stayed open. Fitting for a 48-hour build whose whole job was watching a transaction graph for what shouldn't be there.</p>
+                        <p class="project-desc">
+                            Graph-native Anti-Money Laundering detection system built for Union Bank of India in 48 hours. Ingests 500K synthetic transactions, constructs a directed account graph, and classifies 8 AML typologies using structural graph analysis and a Random Forest classifier. Later developed further and renamed <strong>Vigilia</strong> - see Projects.
+                        </p>
+                        <div class="project-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">NetworkX</span>
+                            <span class="tech-tag">scikit-learn</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Cytoscape.js</span>
+                            <span class="tech-tag">Chart.js</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <div class="project-links">
+                            <a href="#projects" class="project-link" title="See Vigilia in Projects">
+                                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                        <button class="writeup-toggle" onclick="toggleWriteup(this)">read writeup <span class="writeup-arrow">▾</span></button>
+                    </div>
+                </div>
+                <div class="project-writeup">
+                    <div class="writeup-content">
+                        <h4>Problem</h4>
+                        <p>Union Bank's fraud investigators manually reconstruct transaction trails, taking 3 to 5 days per case. Coordinated laundering schemes (circular routing, layering, smurfing) escape detection before funds exit.</p>
+                        <h4>Detection Pipeline (as built at the hackathon)</h4>
+                        <ul>
+                            <li>8 AML typologies: Cycle, Fan-Out, Fan-In, Scatter-Gather, Gather-Scatter, Bipartite, Stack, Random Chain</li>
+                            <li>7 behavioural signals: rapid fan-out, round-trip, structuring below $10K, layering velocity, dormant activation, currency mismatch, smurfing</li>
+                            <li>Random Forest (200 trees, 16 graph features): F1 0.67, Precision 0.83, Accuracy 0.86</li>
+                        </ul>
+                        <h4>Results</h4>
+                        <div class="writeup-metrics">
+                            <div class="metric-box"><div class="val">0.67</div><div class="key">F1 Score</div></div>
+                            <div class="metric-box"><div class="val">0.83</div><div class="key">Precision</div></div>
+                            <div class="metric-box"><div class="val">0.86</div><div class="key">Accuracy</div></div>
+                        </div>
+                        <h4>What Happened After</h4>
+                        <p>The Random Forest baseline above is exactly what shipped in 48 hours - kept here unedited as the hackathon record. Everything built since (Multi-GNN, Postgres persistence, migrations, audit trail, tests) lives under the new name, Vigilia, in the Projects section above.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- ===================== RESEARCH ===================== -->
+<section id="research">
+    <div class="container">
+        <div class="fade-in">
+            <h2 class="section-title">Research</h2>
+            <p class="section-subtitle">Investigating failure modes in Federated Learning at DJS Anveshan.</p>
+        </div>
+
+        <div class="research-card fade-in">
+            <div class="research-card-header">
+                <div class="research-card-badge">DJS Anveshan</div>
+                <span class="course-badge wip" style="font-size:10px;padding:2px 10px;">Ongoing</span>
+            </div>
+            <h3 class="research-card-title">Failure Modes in Federated Learning for Fraud Detection</h3>
+            <p class="research-card-desc">
+                Investigating how Byzantine-robust aggregation schemes in Federated Learning
+                silently discard legitimate updates from institutions with non-IID data distributions,
+                producing models that appear accurate but fail for specific participants.
+            </p>
+            <div class="project-stack" style="margin:20px 0;">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Federated Learning</span>
+                <span class="tech-tag">Byzantine Robustness</span>
+                <span class="tech-tag">Krum</span>
+                <span class="tech-tag">FLAME</span>
+            </div>
+
+            <button class="writeup-toggle" onclick="toggleWriteup(this)">
+                read more <span class="writeup-arrow">▾</span>
+            </button>
+            <div class="project-writeup">
+                <div class="writeup-content">
+                    <h4>Problem</h4>
+                    <p>
+                        Cross-institutional fraud detection systems using Federated Learning rely on robust
+                        aggregation schemes (Krum, FLAME) to filter malicious updates. But these filters
+                        cannot distinguish between a malicious update and a legitimate update from a bank
+                        with a different but valid data distribution. The result: a model that reports high accuracy
+                        while silently failing for specific participants.
+                    </p>
+
+                    <h4>Why It Matters</h4>
+                    <p>
+                        A fraud detection model that works for 90% of banks but fails for the remaining 10%
+                        creates an exploit window. Fraudsters who identify these blind spots can operate
+                        undetected. What makes this dangerous is the reported accuracy - the central server
+                        has no mechanism to flag that its metrics conceal local failure.
+                    </p>
+
+                    <h4>Example</h4>
+                    <p>
+                        Three banks train a joint fraud model via FL. Banks A and B are international with
+                        similar profiles, but Bank C is regional with different customers. The aggregation
+                        filter sees Bank C's updates as outliers, discards them, and the converged model
+                        shows high accuracy - but fails to catch fraud patterns specific to Bank C's population.
+                    </p>
+
+                    <h4>Research Context</h4>
+                    <ul>
+                        <li>Studying FLAME and Krum aggregation schemes and their behaviour under non-IID conditions</li>
+                        <li>Li et al. (IEEE 2024): Byzantine-robust schemes fail even without Byzantine clients when data is non-IID</li>
+                        <li>FL adoption accelerating due to GDPR, India's DPDP Act - more deployments mean more severe non-IID conditions</li>
+                        <li>No standardized pre-deployment verification protocol exists for FL systems to catch this failure class</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== SKILLS ===================== -->
+<section id="skills">
+    <div class="container">
+        <div class="fade-in">
+            <h2 class="section-title">My toolkit</h2>
+            <p class="section-subtitle">Tools and frameworks I use to build, train, and ship across three domains.</p>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-category fade-in">
+                <div class="skill-cat-header">
+                    <div class="skill-cat-icon">🐍</div>
+                    <div class="skill-cat-name">Languages</div>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag skill-tag-clickable" id="pythonTag" onclick="togglePythonProjects()">Python <span class="n8n-arrow">▾</span></span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">Bash</span>
+                    <span class="skill-tag">C++</span>
+                </div>
+            </div>
+            <div class="skill-category fade-in">
+                <div class="skill-cat-header">
+                    <div class="skill-cat-icon">🧪</div>
+                    <div class="skill-cat-name">ML and Deep Learning</div>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">PyTorch Geometric</span>
+                    <span class="skill-tag">scikit-learn</span>
+                    <span class="skill-tag">XGBoost/LightGBM</span>
+                </div>
+            </div>
+            <div class="skill-category fade-in">
+                <div class="skill-cat-header">
+                    <div class="skill-cat-icon">📦</div>
+                    <div class="skill-cat-name">Data and MLOps</div>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">NumPy/Pandas</span>
+                    <span class="skill-tag">Hugging Face</span>
+                    <span class="skill-tag">MLflow</span>
+                </div>
+            </div>
+            <div class="skill-category fade-in">
+                <div class="skill-cat-header">
+                    <div class="skill-cat-icon">🏗️</div>
+                    <div class="skill-cat-name">Infrastructure</div>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">FastAPI</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">GitHub Actions</span>
+                    <span class="skill-tag">Postgres</span>
+                    <span class="skill-tag skill-tag-clickable" id="n8nTag" onclick="toggleN8nProjects()">n8n <span class="n8n-arrow">▾</span></span>
+                </div>
+            </div>
+            <div class="skill-category fade-in">
+                <div class="skill-cat-header">
+                    <div class="skill-cat-icon">🗄️</div>
+                    <div class="skill-cat-name">Databases</div>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Postgres</span>
+                </div>
+            </div>
+            <div class="skill-category fade-in">
+                <div class="skill-cat-header">
+                    <div class="skill-cat-icon">☁️</div>
+                    <div class="skill-cat-name">Cloud</div>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">Render</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Python projects expandable panel -->
+        <div class="n8n-projects" id="pythonProjects">
+            <div class="n8n-projects-inner" style="grid-template-columns:1fr;">
+                <div class="n8n-project-card" style="flex-direction:column;">
+                    <div style="display:flex;gap:12px;">
+                        <div class="n8n-project-icon">🕷️</div>
+                        <div>
+                            <h4 class="n8n-project-title">E-Commerce Product Scraper → n8n</h4>
+                            <p class="n8n-project-desc">A general-purpose scraper that searches <strong>Amazon India</strong> and <strong>Flipkart</strong> for any term and extracts each product's name, price, URL, and description. All results are batched into a single HTTP POST to an <strong>n8n</strong> webhook, which splits them out, appends a row per product to a Google Sheet, and generates a standalone styled HTML page per product saved to Google Drive. The Python scraper and n8n workflow are fully decoupled - both site scrapers emit the same JSON shape, so everything downstream is identical regardless of source.</p>
+                            <div class="project-stack" style="margin-top:8px;">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Requests</span>
+                                <span class="tech-tag">BeautifulSoup</span>
+                                <span class="tech-tag">n8n</span>
+                                <span class="tech-tag">Google Sheets</span>
+                                <span class="tech-tag">Google Drive</span>
+                            </div>
+                        </div>
+                    </div>
+                    <figure class="scraper-figure">
+                        <img src="Images/scraper-workflow.png" alt="n8n Scraper Workflow: Webhook → Split Out → Edit Fields → Append row in sheet → Code in JavaScript → Create file from text">
+                        <figcaption>The n8n workflow: Webhook → Split Out → Edit Fields → Append row in sheet → Code (JS) → Create file in Drive.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <!-- n8n projects expandable panel -->
+        <div class="n8n-projects" id="n8nProjects">
+            <div class="n8n-projects-inner">
+                <div class="n8n-project-card">
+                    <div class="n8n-project-icon">⚙️</div>
+                    <div>
+                        <h4 class="n8n-project-title">Employee Onboarding Pipeline</h4>
+                        <p class="n8n-project-desc">Automated HR pipeline - webhook auth, field validation, duplicate detection, department routing via sub-workflows, audit logging, and error alerting.</p>
+                        <div class="project-stack" style="margin-top:8px;">
+                            <span class="tech-tag">n8n</span>
+                            <span class="tech-tag">Google Sheets</span>
+                            <span class="tech-tag">Gmail</span>
+                            <span class="tech-tag">Webhooks</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="n8n-project-card">
+                    <div class="n8n-project-icon">📊</div>
+                    <div>
+                        <h4 class="n8n-project-title">Automated Sales Report Pipeline</h4>
+                        <p class="n8n-project-desc">Weekly scheduled pipeline - merges multi-source sales data, calculates KPIs, detects performance anomalies (>20% drop), delivers HTML executive summary via email.</p>
+                        <div class="project-stack" style="margin-top:8px;">
+                            <span class="tech-tag">n8n</span>
+                            <span class="tech-tag">Google Sheets</span>
+                            <span class="tech-tag">Gmail</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== EXPERIENCE AND EDUCATION ===================== -->
+<section id="experience" style="background:var(--bg-surface)">
+    <div class="container">
+        <div class="fade-in">
+            <h2 class="section-title">My Journey</h2>
+        </div>
+        <div class="timeline">
+
+            <div class="timeline-item fade-in">
+                <div class="timeline-item-header">
+                    <div class="timeline-role">Developer Intern</div>
+                    <div class="timeline-period">Sep 2026 – present</div>
+                </div>
+                <div class="timeline-org">Aelius Turbina LLP, solar BIPV manufacturer and EPC</div>
+                <ul class="timeline-points">
+                    <li>Built a FastAPI pipeline that turns vendor Proforma Invoices (PDFs, scans, chat screenshots) into Zoho Books Purchase Orders via LLM/OCR extraction, GSTIN-verified vendor resolution, item matching, and a submitter + admin review loop</li>
+                    <li>Built a TallyPrime to Zoho Books sync over Tally's XML gateway with a cached OAuth layer, rate limiting, and GST-aware handling across two state registrations</li>
+                    <li>Built a self-hosted Tally BI dashboard (Sales, Purchase, Receivables, Cash Flow, P&amp;L) with industry-standard KPIs such as DSO and rate variance</li>
+                    <li>Built an area-based lead engine merging MahaRERA, MCA, MPCB and Google Places into one SQLite store with cross-source dedupe, scoring, and human-approved outreach drafts</li>
+                    <li>Prototyping a photo-to-CAD pipeline (COLMAP, Open3D plane fitting, CadQuery STEP export) as the base for an AR rooftop solar design tool</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item fade-in">
+                <div class="timeline-item-header">
+                    <div class="timeline-role">Developer Intern</div>
+                    <div class="timeline-period">Jun 2026 – Aug 2026</div>
+                </div>
+                <div class="timeline-org">ITAakash Strategic Software Pvt. Ltd., Development</div>
+                <ul class="timeline-points">
+                    <li>Built an AI cash-flow forecasting system using Amazon Chronos-2, replacing a legacy XGBoost pipeline, integrated into an existing ERP system</li>
+                    <li>Designed a Flask API serving rolling forecasts per grouped financial record, backed by PostgreSQL</li>
+                    <li>Implemented walk-forward backtesting with bias correction for right-skewed cash flow data</li>
+                </ul>
+                <button class="writeup-toggle" onclick="toggleInternshipProjects()" style="margin-top:8px;">
+                    Show Projects <span class="internship-arrow">▾</span>
+                </button>
+                <div class="intern-panel" id="internPanel">
+                    <div class="n8n-projects-inner" style="margin-top:16px;">
+                        <div class="n8n-project-card">
+                            <div class="n8n-project-icon">💰</div>
+                            <div>
+                                <h4 class="n8n-project-title">AI Cash-Flow Forecasting</h4>
+                                <p class="n8n-project-desc">Production system predicting daily net cash flow across thousands of grouped financial records. Chronos-2 zero-shot transformer behind a Flask API, feeding PostgreSQL for an ERP balance sheet view.</p>
+                                <div class="project-stack" style="margin-top:8px;">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Chronos-2</span>
+                                    <span class="tech-tag">Flask</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="n8n-project-card">
+                            <div class="n8n-project-icon">📊</div>
+                            <div>
+                                <h4 class="n8n-project-title">AI Feature Adoption Analysis</h4>
+                                <p class="n8n-project-desc">Diagnosed why customers weren't recharging coins for the company's AI features. Built a cleaning + analysis pipeline over raw coin-ledger data (credit buckets, JSON transaction history) spanning 8+ AI modules — Chanakya Bot, OCR Pro, CV Analysis, Chanakya Vaani, CRM Bot, ML Predictions, BOQ/AutoCAD, Site Vision AI — surfacing funnel drop-off, feature adoption, churn, and cohort retention in a self-contained HTML report.</p>
+                                <div class="project-stack" style="margin-top:8px;">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Pandas</span>
+                                    <span class="tech-tag">NumPy</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="n8n-project-card">
+                            <div class="n8n-project-icon">🎙️</div>
+                            <div>
+                                <h4 class="n8n-project-title">Centiloquy — Call Analysis Workflow</h4>
+                                <p class="n8n-project-desc">Automated workflow that turns a call transcript or audio recording into a structured analysis - FAQ topics, agent performance, resolution status, sentiment/coaching, topic clusters, escalation flags, CSAT estimate, and talk-time balance. Handles doc uploads, raw text, and direct audio (Whisper) synchronously, plus long recordings via a batch transcription pipeline (Sarvam AI) with polling and retry logic.</p>
+                                <div class="project-stack" style="margin-top:8px;">
+                                    <span class="tech-tag">n8n</span>
+                                    <span class="tech-tag">OpenAI Whisper</span>
+                                    <span class="tech-tag">Sarvam AI</span>
+                                    <span class="tech-tag">Webhooks</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item fade-in">
+                <div class="timeline-item-header">
+                    <div class="timeline-role">B.Tech in Computer Engineering</div>
+                    <div class="timeline-period">2024 – 2028</div>
+                </div>
+                <div class="timeline-org">DJ Sanghavi College of Engineering</div>
+                <ul class="timeline-points">
+                    <li>Semester 5 (ongoing) · CGPA: 9.15</li>
+                    <li>Relevant coursework: Data Structures, Algorithms, Statistics, Machine Learning</li>
+                    <li>Member, Research and Publicity Department, DJS Anveshan - researching failure modes in Federated Learning</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== COURSES ===================== -->
+<section id="courses">
+    <div class="container">
+        <div class="fade-in">
+            <h2 class="section-title">Continuous learning</h2>
+            <p class="section-subtitle">Certifications earned alongside engineering.</p>
+        </div>
+        <div class="courses-grid fade-in">
+
+            <div class="course-card">
+                <div class="course-provider">Kaggle</div>
+                <div class="course-name">Intro to Machine Learning</div>
+                <div class="course-meta">Kaggle Learn · 2025</div>
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;">
+                    <div class="course-badge done">Completed</div>
+                    <a href="Certificate/Viraj Sanghavi - Intro to Machine Learning.png" target="_blank" style="font-size:12px;color:var(--accent);text-decoration:none;font-family:var(--font-mono);letter-spacing:0.04em;">View Certificate ↗</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-provider">Kaggle</div>
+                <div class="course-name">Computer Vision</div>
+                <div class="course-meta">Kaggle Learn · 2026</div>
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;">
+                    <div class="course-badge done">Completed</div>
+                    <a href="Certificate/Viraj Sanghavi007 - Computer Vision.png" target="_blank" style="font-size:12px;color:var(--accent);text-decoration:none;font-family:var(--font-mono);letter-spacing:0.04em;">View Certificate ↗</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-provider">DeepLearning.ai</div>
+                <div class="course-name">Deep Learning Specialisation</div>
+                <div class="course-meta">Andrew Ng · 5 courses</div>
+                <div style="margin-top:12px;">
+                    <div class="course-badge wip">In Progress</div>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-provider">Great Learning</div>
+                <div class="course-name">SQL for Data Science</div>
+                <div class="course-meta">Great Learning · 2025</div>
+                <div style="margin-top:12px;">
+                    <div class="course-badge wip">In Progress</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== KAGGLE ===================== -->
+<section id="kaggle" style="background:var(--bg-surface)">
+    <div class="container">
+        <div class="fade-in">
+            <h2 class="section-title">Kaggle</h2>
+            <p class="section-subtitle">Public notebooks, auto-synced from my profile.</p>
+        </div>
+        <div class="fade-in">
+            <div class="kaggle-toolbar">
+                <input type="text" class="kaggle-search" id="kaggleSearch" placeholder="Search notebooks…" oninput="filterKaggle()">
+                <span class="kaggle-count" id="kaggleCount"></span>
+            </div>
+            <div class="kaggle-list" id="kaggleGrid">                <div class="kaggle-row" data-name="a large scale fish dataset (f1 100.00)">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">A Large Scale Fish Dataset (F1 100.00)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">recently published</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/a-large-scale-fish-dataset-f1-100-00" target="_blank">View ↗</a>
+                    </div>
+                </div>
+
+                <div class="kaggle-row" data-name="rice image dataset f1 99.81">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Rice Image Dataset (F1 99.81)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">recently published</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/rice-image-dataset-f1-99-81" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="california housing prices mae 29085.51">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">California Housing Prices (MAE 29085.51)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">recently published</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/california-housing-prices-mae-29085-51" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="medical cost personal datasets mae 2337.30">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Medical Cost Personal Datasets MAE 2337.30</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">recently published</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/medical-cost-personal-datasets-mae-2337-30" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="red wine quality mae 0.42">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Red Wine Quality (MAE 0.42)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">recently published</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/red-wine-quality-mae-0-42" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="house sales king county mae 66149.13">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">House Sales King County (MAE 66149.13)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">recently published</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/house-sales-king-county-mae-66149-13" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="iris species roc-auc 0.97">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Iris Species (ROC-AUC 0.97)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">recently published</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/iris-species-roc-auc-0-97" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="crop recommendation dataset roc-auc 1.00">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Crop Recommendation Dataset (ROC-AUC 1.00)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">recently published</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/crop-recommendation-dataset-roc-auc-1-00" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="diamonds price prediction mae 260.26">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Diamonds Price Prediction (MAE 260.26)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">recently published</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/diamonds-price-prediction-mae-260-26" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="diabetes prediction dataset roc-auc 0.98">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Diabetes Prediction Dataset (ROC-AUC 0.98)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">recently published</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/diabetes-prediction-dataset-roc-auc-0-98" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="indian liver patient dataset auc-pr 0.896">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Indian Liver Patient Dataset (AUC-PR 0.896)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">recently published</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/indian-liver-patient-dataset-auc-pr-0-896" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="used cars price prediction mae 1,587">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Used Cars Price Prediction (MAE 1,587)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">recently published</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/used-cars-price-prediction-mae-1-587" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="olympic classification time series auc-roc 0.91">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Olympic Classification Time Series (AUC-ROC: 0.91)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">recently published</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/olympic-classification-time-series-auc-roc-0-91" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="chest x-ray images pneumonia auc 0.9576">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Chest X-Ray Images (Pneumonia) (AUC 0.9576)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">recently published</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/chest-x-ray-images-pneumonia-auc-0-9576" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="mushroom classification with nn 99.9% acc">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Mushroom Classification with NN (99.9% Acc)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">2026-08-27</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/mushroom-classification-with-nn-99-9-acc" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="student performance using rf mae 3.0150">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Student Performance using RF (MAE 3.0150)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">2026-08-28</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/student-performance-using-rf-with-mae-3-0150" target="_blank">View ↗</a>
+                    </div>
+                </div>
+                <div class="kaggle-row" data-name="human activity recognition accuracy 96.2%">
+                    <div class="kaggle-row-main">
+                        <span class="kaggle-row-kind">NB</span>
+                        <span class="kaggle-row-name">Human Activity Recognition (Accuracy 96.2%)</span>
+                    </div>
+                    <div class="kaggle-row-right">
+                        <span class="kaggle-row-meta">2026-09-10</span>
+                        <a class="kaggle-row-link" href="https://www.kaggle.com/code/virajsanghavi007/human-activity-recognition-accuracy-96-2" target="_blank">View ↗</a>
+                    </div>
+                </div>
+            </div>
+            <button class="kaggle-toggle" id="kaggleToggle" onclick="toggleKaggle()">Expand list ↕</button>
+        </div>
+    </div>
+</section>
+<script>
+function toggleKaggle() {
+    var list = document.getElementById('kaggleGrid');
+    var btn = document.getElementById('kaggleToggle');
+    list.classList.toggle('expanded');
+    btn.textContent = list.classList.contains('expanded') ? 'Collapse list ↕' : 'Expand list ↕';
+}
+function filterKaggle() {
+    var q = document.getElementById('kaggleSearch').value.trim().toLowerCase();
+    var rows = document.querySelectorAll('#kaggleGrid .kaggle-row');
+    var visible = 0;
+    rows.forEach(function(row) {
+        var match = row.dataset.name.indexOf(q) !== -1;
+        row.hidden = !match;
+        if (match) visible++;
+    });
+    document.getElementById('kaggleCount').textContent = visible + ' of ' + rows.length + ' notebooks';
+}
+document.addEventListener('DOMContentLoaded', filterKaggle);
+</script>
+
+
+<!-- ===================== GITHUB ===================== -->
+<section id="github" style="background:var(--bg-surface)">
+    <div class="container">
+        <div class="fade-in">
+            <h2 class="section-title">GitHub</h2>
+            <p class="section-subtitle">Public repositories and activity.</p>
+        </div>
+        <div class="activity-grid fade-in" style="grid-template-columns:1fr;">
+            <div class="activity-card">
+                <div class="activity-platform">GitHub</div>
+                <div class="activity-stat-big" id="ghRepos" data-target="4">0</div>
+                <div class="activity-stat-sub">public repositories</div>
+                <div class="activity-breakdown">
+                    <div class="activity-row">
+                        <span>Handle</span>
+                        <span>VirajSanghavi007</span>
+                    </div>
+                    <div class="activity-row">
+                        <span>Stars</span>
+                        <span id="ghStars">0</span>
+                    </div>
+                    <div class="activity-row">
+                        <span>Followers</span>
+                        <span id="ghFollowers">0</span>
+                    </div>
+                </div>
+                <a href="https://github.com/VirajSanghavi007" target="_blank" class="activity-link">View Profile ↗</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== COMPETITIVE PROGRAMMING ===================== -->
+<section id="activity">
+    <div class="container">
+        <div class="fade-in">
+            <h2 class="section-title">Competitive Programming</h2>
+            <p class="section-subtitle">Contest practice, DSA problem solving, and rating progress.</p>
+        </div>
+        <div class="activity-grid fade-in">
+            <!-- CODEFORCES -->
+            <div class="activity-card">
+                <div class="activity-platform">Codeforces</div>
+                <div class="activity-stat-big" id="cfRating" data-target="590">0</div>
+                <div class="activity-stat-sub">contest rating</div>
+                <div class="activity-breakdown">
+                    <div class="activity-row">
+                        <span>Handle</span>
+                        <span>Black_Water_009</span>
+                    </div>
+                    <div class="activity-row">
+                        <span>Status</span>
+                        <span id="cfRank">Newbie</span>
+                    </div>
+                    <div class="activity-row">
+                        <span>Solved</span>
+                        <span id="cfSolved">39</span>
+                    </div>
+                </div>
+                <a href="https://codeforces.com/profile/Black_Water_009" target="_blank" class="activity-link">View Profile ↗</a>
+            </div>
+
+            <!-- LEETCODE -->
+            <div class="activity-card">
+                <div class="activity-platform">LeetCode</div>
+                <div class="activity-stat-big" id="lcTotal" data-target="27">0</div>
+                <div class="activity-stat-sub">problems solved</div>
+                <div class="activity-breakdown">
+                    <div class="activity-row">
+                        <span class="easy-color">Easy</span>
+                        <span id="lcEasy">15 / 972</span>
+                    </div>
+                    <div class="activity-row">
+                        <span class="med-color">Medium</span>
+                        <span id="lcMedium">11 / 2131</span>
+                    </div>
+                    <div class="activity-row">
+                        <span class="hard-color">Hard</span>
+                        <span id="lcHard">1 / 984</span>
+                    </div>
+                    <div class="activity-row">
+                        <span>Ranking</span>
+                        <span id="lcRanking">#3,933,008</span>
+                    </div>
+                </div>
+                <a href="https://leetcode.com/u/Viraj_Sanghavi/" target="_blank" class="activity-link">View Profile ↗</a>
+            </div>
+
+            <!-- PROJECT EULER -->
+            <div class="activity-card">
+                <div class="activity-platform">Project Euler</div>
+                <div class="activity-stat-big" id="peSolved" data-target="9">0</div>
+                <div class="activity-stat-sub">problems solved</div>
+                <div class="activity-breakdown">
+                    <div class="activity-row">
+                        <span>Note</span>
+                        <span style="font-size:12px;color:var(--text-muted);">manually updated - no public API</span>
+                    </div>
+                </div>
+                <a href="https://projecteuler.net/progress" target="_blank" class="activity-link">View Profile ↗</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ===================== FREELANCE ===================== -->
+<section id="freelance">
+    <div class="container">
+        <div class="fade-in">
+            <h2 class="section-title">Freelance</h2>
+            <p class="section-subtitle">Open to short-term contract work in ML systems and automation.</p>
+        </div>
+
+        <div class="research-card fade-in">
+            <div class="research-card-header">
+                <div class="research-card-badge">Available</div>
+            </div>
+            <h3 class="research-card-title">ML pipelines, API backends, and workflow automation</h3>
+            <p class="research-card-desc">
+                Scoped engagements: an evaluation pipeline that actually validates a model before it ships,
+                a FastAPI backend for an existing ML system, or automation around Zoho Books, TallyPrime or n8n that replaces a manual process.
+                Not open to ongoing/full-time contract work while in school, best suited for fixed-scope projects.
+            </p>
+            <div class="project-stack" style="margin:20px 0;">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">Zoho Books API</span>
+                <span class="tech-tag">TallyPrime</span>
+                <span class="tech-tag">n8n</span>
+                <span class="tech-tag">PyTorch</span>
+                <span class="tech-tag">PostgreSQL</span>
+            </div>
+            <!-- Add real profile links once set up: Contra, Internshala, Upwork -->
+            <div class="project-links">
+                <a href="mailto:virajsanghavi000@gmail.com" class="project-link" title="Email">
+                    <div class="contact-link-icon">✉</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" style="background:var(--bg-surface)">
+    <div class="container">
+        <div class="fade-in">
+            <h2 class="section-title">Let's connect</h2>
+        </div>
+        <div class="contact-wrapper">
+            <div class="contact-left fade-in">
+                <p>
+                    Open to discussing <strong>ML research, AI projects, internship opportunities,
+                    collaborations, or just interesting ideas</strong>. My inbox is always open.
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:virajsanghavi000@gmail.com" class="contact-link-item">
+                        <div class="contact-link-icon">✉</div>
+                        <div class="contact-link-text">
+                            <div class="contact-link-label">EMAIL</div>
+                            <div class="contact-link-value">virajsanghavi000@gmail.com</div>
+                        </div>
+                    </a>
+                    <a href="https://github.com/VirajSanghavi007" target="_blank" class="contact-link-item">
+                        <div class="contact-link-icon">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </div>
+                        <div class="contact-link-text">
+                            <div class="contact-link-label">GITHUB</div>
+                            <div class="contact-link-value">github.com/VirajSanghavi007</div>
+                        </div>
+                    </a>
+                    <a href="https://linkedin.com/in/virajsanghavi" target="_blank" class="contact-link-item">
+                        <div class="contact-link-icon">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </div>
+                        <div class="contact-link-text">
+                            <div class="contact-link-label">LINKEDIN</div>
+                            <div class="contact-link-value">linkedin.com/in/virajsanghavi</div>
+                        </div>
+                    </a>
+                    <a href="https://www.kaggle.com/virajsanghavi007" target="_blank" class="contact-link-item">
+                        <div class="contact-link-icon">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.334z"/></svg>
+                        </div>
+                        <div class="contact-link-text">
+                            <div class="contact-link-label">KAGGLE</div>
+                            <div class="contact-link-value">kaggle.com/virajsanghavi007</div>
+                        </div>
+                    </a>
+                    <a href="https://x.com/virajsanghavi00" target="_blank" class="contact-link-item">
+                        <div class="contact-link-icon">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </div>
+                        <div class="contact-link-text">
+                            <div class="contact-link-label">X</div>
+                            <div class="contact-link-value">x.com/virajsanghavi00</div>
+                        </div>
+                    </a>
+                    <div class="contact-link-item" style="cursor:default;">
+                        <div class="contact-link-icon">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.37a19.79 19.79 0 00-4.885-1.515.074.074 0 00-.079.037c-.211.375-.444.865-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028 14.09 14.09 0 001.226-1.994.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.3 12.3 0 01-1.873.892.076.076 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.84 19.84 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.955 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+                        </div>
+                        <div class="contact-link-text">
+                            <div class="contact-link-label">DISCORD</div>
+                            <div class="contact-link-value">pheonix_sun_007</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form fade-in" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="fname">NAME</label>
+                    <input type="text" id="fname" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="femail">EMAIL</label>
+                    <input type="email" id="femail" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="fmessage">MESSAGE</label>
+                    <textarea id="fmessage" placeholder="What's on your mind?" required></textarea>
+                </div>
+                <button type="submit" class="form-submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+    <div class="container">
+        <p>Built by <span>Viraj Sanghavi</span> · 2026</p>
+        <p style="margin-top:8px; font-size:12px">Plain HTML, CSS, JS · no frameworks, no dependencies.</p>
+    </div>
+</footer>
+
+
+<!-- ===================== JAVASCRIPT ===================== -->
+<script src="script.js"></script>
+
+<!-- EmailJS SDK,must load before contact.js -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="contact.js"></script>
+
+</body>
+</html>
