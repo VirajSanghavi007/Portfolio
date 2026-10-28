@@ -256,6 +256,14 @@ const PROJECTS = [
    desc:'An unattended daily job: picks a dataset, runs EDA, a scheduled Claude routine chooses the pipeline, Optuna benchmarks models, then the notebook is generated, run and published to GitHub and Kaggle.',
    m:[['daily','unattended'],['Optuna','model search'],['GitHub + Kaggle','published to']],
    stack:['Optuna','scikit-learn','CatBoost','Kaggle API','Claude'], url:'https://github.com/VirajSanghavi007/AutoKaggle'},
+  {id:'rag', g:'📚', name:'Novel RAG', sub:'34 novels, ask anything', tag:'LLM · Retrieval',
+   desc:'Scrapes free chapters of translated web novels (paid chapters are detected and skipped, failing closed), embeds them into Postgres + pgvector, and answers questions through a tool-calling agent that decides for itself when a question needs a search. Runs local on Ollama or on Claude / OpenAI, with a pywebview desktop console.',
+   m:[['34','novels indexed'],['768-d','HNSW cosine'],['3','LLM providers']],
+   stack:['pgvector','Postgres','Ollama','Claude','OpenAI','pywebview']},
+  {id:'vertumnus', g:'🎣', name:'Vertumnus', sub:'early scaffold', tag:'Security · Awareness Training',
+   desc:'A defensive security-awareness platform: authorized phishing simulations against an organization\'s own enrolled staff, with results fed back into targeted training. Consent-only targeting, fictitious personas, no live payloads, and an audit log with a kill switch are hard constraints in code. Developed against a fully synthetic company on the reserved .test domain.',
+   m:[['consent-only','targets'],['.test','synthetic org'],['kill switch','every campaign']],
+   stack:['Python','uv','synthetic data']},
 ];
 const FREELANCE = [
   {id:'pi', g:'🧾', name:'PI ⇄ PO', sub:'Zoho Books', desc:'Turns a proforma invoice into a purchase order (and back) in Zoho Books, GST worked out from both GSTINs. Built for accountants, not developers.'},

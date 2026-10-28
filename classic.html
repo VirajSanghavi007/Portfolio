@@ -349,6 +349,57 @@
                 </div>
             </div>
 
+            <!-- PROJECT: Novel RAG -->
+            <div class="project-card fade-in">
+                <div class="project-visual" style="background:linear-gradient(135deg,#0a1420,rgba(28,143,160,0.12))">
+                    <span class="project-visual-icon">📚</span>
+                </div>
+                <div class="project-header">
+                    <div>
+                        <span class="project-tag">LLM · Retrieval</span>
+                        <h3 class="project-title">Novel RAG</h3>
+                        <p class="project-desc">
+                            Scrapes free chapters of 34 translated web novels (paid chapters are detected and skipped, failing
+                            closed), embeds them into Postgres with pgvector (768-dim, HNSW cosine), and answers questions through a
+                            tool-calling agent that decides for itself when a question needs a search. Runs locally on Ollama or on
+                            Claude and OpenAI, with a pywebview desktop console for asking, searching and reading.
+                        </p>
+                        <div class="project-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">pgvector</span>
+                            <span class="tech-tag">Postgres</span>
+                            <span class="tech-tag">Ollama</span>
+                            <span class="tech-tag">Claude</span>
+                            <span class="tech-tag">OpenAI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT: Vertumnus -->
+            <div class="project-card fade-in">
+                <div class="project-visual" style="background:linear-gradient(135deg,#0a1420,rgba(28,143,160,0.12))">
+                    <span class="project-visual-icon">🎣</span>
+                </div>
+                <div class="project-header">
+                    <div>
+                        <span class="project-tag">Security · Awareness Training</span>
+                        <h3 class="project-title">Vertumnus</h3>
+                        <p class="project-desc">
+                            Early scaffold of a defensive security-awareness platform: authorized phishing simulations against an
+                            organization's own enrolled staff, with results fed back into targeted training. Consent-only targeting,
+                            fictitious personas, no live payloads, and an audit log with a kill switch are hard constraints in code.
+                            Developed against a fully synthetic company on the reserved .test domain.
+                        </p>
+                        <div class="project-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">uv</span>
+                            <span class="tech-tag">Synthetic Data</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
