@@ -37,13 +37,3 @@ CGPA: 9.15 #h(1fr) Mumbai, India
 #proj([#ulink("https://github.com/VirajSanghavi007/TinyML")[TinyML] -- CIFAR-10 on a Microcontroller Budget], [Oct 2026 -- present])
 - Compressed a ResNet-18 teacher (93.3%) into an int8 model at 84.8% test accuracy in 70.6 KB flash and 16 KB peak RAM (100 KB / 20 KB budget) via Once-for-All supernet training, evolutionary search, structured pruning, and KD + QAT
 - Benchmarked every stage against baselines (scratch CE/KD, pruning without fine-tune, PTQ vs QAT); checkpoint-resumable pipeline with unit, smoke and integration tests in GitHub Actions CI
-
-= Research
-#entry([Publicity & Research Member], [DJS Anveshan, Research Club], [Jan 2024 -- present], sub: [Dwarkadas J. Sanghvi College of Engineering])
-- Authored a problem discovery report on a critical Federated Learning failure mode: robust aggregation filters (Krum, FLAME) silently discarding valid non-IID updates from minority institutions in cross-institutional fraud detection
-- Identified an unaddressed gap in FL security literature as of 2025, citing IEEE Transactions on Big Data and JPMorgan's Project Aikya
-
-= Skills
-*Languages / Infra:* Python, SQL, TypeScript, Bash, C++, Git, Docker, FastAPI, React, PostgreSQL, SQLite \
-*ML / Data:* PyTorch, PyTorch Geometric, NAS, Pruning, Quantization (QAT), scikit-learn, XGBoost, LightGBM, NumPy, Pandas, Hugging Face \
-*Integrations:* Zoho Books API, TallyPrime (XML/ODBC), OAuth 2.0, Render
