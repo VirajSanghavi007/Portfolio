@@ -229,6 +229,9 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 
 /* Other views */
 .view h1.page { font-weight: 400; font-size: clamp(26px, 3.2vw, 32px); letter-spacing: -0.02em; margin: 16px 0 12px; text-wrap: balance; }
+.me { display: flex; align-items: center; gap: 18px; margin: 16px 0 14px; }
+.view .me h1.page { margin: 0; }
+.me img { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; border: 1px solid var(--line); }
 .view p { color: var(--muted); font-size: 13.5px; line-height: 1.6; max-width: 62ch; margin: 0 0 12px; }
 .facts { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin-top: 22px; }
 .fact { border: 1px solid var(--line-soft); border-radius: 9px; padding: 14px; display: grid; gap: 6px; }
@@ -363,6 +366,12 @@ form.msg input:focus, form.msg textarea:focus { outline: none; border-color: var
   .dock .app { width: 38px; height: 38px; border-radius: 10px; }
   .dock .app .ico { width: 18px; height: 18px; }
 }
+/* Mac-style boot: once per tab session, ?boot shows it again */
+#boot { position: fixed; inset: 0; z-index: 9999; background: #000; display: grid; place-content: center; justify-items: center; gap: 46px; cursor: pointer; }
+#boot .boot-logo { width: 88px; height: 88px; color: #f2f2f2; stroke-width: 1.25; }
+#boot .boot-bar { width: 176px; height: 5px; border-radius: 3px; background: #3a3a3c; overflow: hidden; }
+#boot .boot-bar i { display: block; height: 100%; width: 0; background: #f2f2f2; border-radius: inherit; }
+#boot.out { transition: opacity .5s ease; opacity: 0; pointer-events: none; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
@@ -393,6 +402,18 @@ form.msg input:focus, form.msg textarea:focus { outline: none; border-color: var
     <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5.5A1.5 1.5 0 0 0 14.5 4h-9A1.5 1.5 0 0 0 4 5.5v9A1.5 1.5 0 0 0 5.5 16H8"/></symbol>
   </defs>
 </svg>
+
+<div id="boot" role="progressbar" aria-label="Starting up" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+  <svg class="ico boot-logo" aria-hidden="true"><use href="#i-star"/></svg>
+  <div class="boot-bar"><i></i></div>
+</div>
+<script>
+  // Skip the boot screen when this tab has seen it (unless ?boot) or the visitor prefers less motion.
+  try {
+    const seen = sessionStorage.getItem('booted') === '1' && !new URLSearchParams(location.search).has('boot');
+    if (seen || matchMedia('(prefers-reduced-motion: reduce)').matches) document.getElementById('boot').remove();
+  } catch { document.getElementById('boot').remove(); }
+</script>
 
 <header class="menubar">
   <div class="brand"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg><span>Viraj Sanghavi</span></div>
@@ -494,7 +515,7 @@ form.msg input:focus, form.msg textarea:focus { outline: none; border-color: var
 
         <!-- About -->
         <div class="view" data-for="about" hidden>
-          <h1 class="page">Hi, I'm Viraj.</h1>
+          <div class="me"><img src="Images/viraj.webp" width="88" height="88" alt="Viraj Sanghavi" decoding="async"><h1 class="page">Hi, I'm Viraj.</h1></div>
           <p>I'm a third-year Computer Engineering student at DJ Sanghavi College of Engineering (graduating 2028), building systems across graph ML, edge ML, Federated Learning research and business automation. I didn't wait for a degree to do real work: two internships of production AI and automation, a graph AML detector, a CIFAR-10 model squeezed into 70 KB, and research at DJS Anveshan on why Federated Learning breaks under attack.</p>
           <p>Most of what I build gets re-evaluated harder than a demo needs: walk-forward backtests instead of a single split, error diagnosis instead of trusting one number, drift monitoring instead of assuming a model stays good. I'd rather ship something slower that holds up than something fast that only looks finished.</p>
           <div class="facts">
@@ -819,6 +840,40 @@ form.msg input:focus, form.msg textarea:focus { outline: none; border-color: var
   });
 
   if (location.hash) show(location.hash.slice(1));
+
+  // ----- boot screen: logo + progress bar that fills in uneven steps, then fades out -----
+  const boot = $('#boot');
+  if (boot) {
+    const STEPS = [[0, 0], [300, 6], [800, 24], [1100, 55], [1600, 62], [2000, 90], [2300, 100]];
+    const bar = $('.boot-bar i', boot);
+    let t0 = null, done = false;
+    const finish = () => {
+      done = true;
+      try { sessionStorage.setItem('booted', '1'); } catch {}
+      boot.classList.add('out');
+      setTimeout(() => boot.remove(), 500);
+    };
+    const frame = now => {
+      if (done) return;
+      t0 ??= now;
+      const t = now - t0;
+      let k = 1;
+      while (k < STEPS.length - 1 && STEPS[k][0] < t) k++;
+      const [ta, pa] = STEPS[k - 1], [tb, pb] = STEPS[k];
+      const pct = pa + (pb - pa) * Math.min(1, (t - ta) / (tb - ta));
+      bar.style.width = pct + '%';
+      boot.setAttribute('aria-valuenow', Math.round(pct));
+      if (t >= STEPS[STEPS.length - 1][0]) setTimeout(finish, 250); else requestAnimationFrame(frame);
+    };
+    requestAnimationFrame(frame);
+    boot.addEventListener('click', finish);
+    // Any key skips; a modifier alone (the Ctrl of Ctrl+K) waits for the real key so the shortcut is swallowed too.
+    addEventListener('keydown', e => {
+      if (done) return;
+      e.stopImmediatePropagation(); e.preventDefault();
+      if (!['Control', 'Meta', 'Shift', 'Alt'].includes(e.key)) finish();
+    }, true);
+  }
 })();
 </script>
 </body>
