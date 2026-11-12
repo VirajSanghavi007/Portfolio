@@ -368,7 +368,8 @@ form.msg input:focus, form.msg textarea:focus { outline: none; border-color: var
 }
 /* Mac-style boot: once per tab session, ?boot shows it again */
 #boot { position: fixed; inset: 0; z-index: 9999; background: #000; display: grid; place-content: center; justify-items: center; gap: 46px; cursor: pointer; }
-#boot .boot-logo { width: 88px; height: 88px; color: #f2f2f2; stroke-width: 1.25; }
+#boot .boot-logo { width: 88px; height: 88px; color: #f2f2f2; stroke-width: 1.25; animation: boot-spin 2.4s linear infinite; }
+@keyframes boot-spin { to { transform: rotate(360deg); } }
 #boot .boot-bar { width: 176px; height: 5px; border-radius: 3px; background: #3a3a3c; overflow: hidden; }
 #boot .boot-bar i { display: block; height: 100%; width: 0; background: #f2f2f2; border-radius: inherit; }
 #boot.out { transition: opacity .5s ease; opacity: 0; pointer-events: none; }
@@ -841,10 +842,11 @@ form.msg input:focus, form.msg textarea:focus { outline: none; border-color: var
 
   if (location.hash) show(location.hash.slice(1));
 
-  // ----- boot screen: logo + progress bar that fills in uneven steps, then fades out -----
+  // ----- boot screen: spinning logo + progress bar that fills in uneven steps over 3-5 s, then fades out -----
   const boot = $('#boot');
   if (boot) {
-    const STEPS = [[0, 0], [300, 6], [800, 24], [1100, 55], [1600, 62], [2000, 90], [2300, 100]];
+    const FILL = 3000 + Math.random() * 2000;  // ms; a different length each visit, like a real start-up
+    const STEPS = [[0, 0], [0.13, 6], [0.35, 24], [0.48, 55], [0.7, 62], [0.87, 90], [1, 100]].map(([f, pct]) => [f * FILL, pct]);
     const bar = $('.boot-bar i', boot);
     let t0 = null, done = false;
     const finish = () => {
